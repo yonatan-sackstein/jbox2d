@@ -28,8 +28,7 @@ import java.util.LinkedList;
 import org.jbox2d.common.IViewportTransform;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.World;
-import org.jbox2d.serialization.SerializationResult;
-import org.jbox2d.serialization.UnsupportedObjectException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -415,7 +414,7 @@ public abstract class AbstractTestbedController {
   }
 
   private void _load() {
-  
+
   }
 }
 

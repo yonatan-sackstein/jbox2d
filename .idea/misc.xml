@@ -8,6 +8,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/jbox2d-serialization/pom.xml" />
         <option value="$PROJECT_DIR$/jbox2d-testbed-javafx/pom.xml" />
         <option value="$PROJECT_DIR$/jbox2d-testbed-jogl/pom.xml" />
       </set>

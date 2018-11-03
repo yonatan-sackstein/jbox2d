@@ -57,16 +57,15 @@ import org.jbox2d.dynamics.joints.Joint;
 import org.jbox2d.dynamics.joints.MouseJoint;
 import org.jbox2d.dynamics.joints.MouseJointDef;
 import org.jbox2d.particle.ParticleGroup;
-import org.jbox2d.serialization.UnsupportedListener;
-import org.jbox2d.serialization.UnsupportedObjectException;
+
 
 /**
  * @author Daniel Murphy
  */
 public abstract class TestbedTest
     implements
-      ContactListener,
-      UnsupportedListener {
+      ContactListener
+      {
   public static final int MAX_CONTACT_POINTS = 4048;
   public static final float ZOOM_SCALE_DIFF = .05f;
   public static final int TEXT_LINE_SPACE = 13;
@@ -668,10 +667,6 @@ public abstract class TestbedTest
     return false;
   }
 
-  @Override
-  public boolean isUnsupported(UnsupportedObjectException exception) {
-    return true;
-  }
 
   public void fixtureDestroyed(Fixture fixture) {}
 
