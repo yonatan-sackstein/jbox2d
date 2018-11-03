@@ -9,7 +9,6 @@
         <module name="jbox2d-library" />
         <module name="jbox2d-serialization" />
         <module name="jbox2d-testbed" />
-        <module name="jbox2d-testbed-jogl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
