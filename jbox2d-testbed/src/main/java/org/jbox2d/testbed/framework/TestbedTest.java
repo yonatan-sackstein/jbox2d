@@ -57,14 +57,8 @@ import org.jbox2d.dynamics.joints.Joint;
 import org.jbox2d.dynamics.joints.MouseJoint;
 import org.jbox2d.dynamics.joints.MouseJointDef;
 import org.jbox2d.particle.ParticleGroup;
-import org.jbox2d.serialization.JbDeserializer;
-import org.jbox2d.serialization.JbDeserializer.ObjectListener;
-import org.jbox2d.serialization.JbSerializer;
-import org.jbox2d.serialization.JbSerializer.ObjectSigner;
 import org.jbox2d.serialization.UnsupportedListener;
 import org.jbox2d.serialization.UnsupportedObjectException;
-import org.jbox2d.serialization.pb.PbDeserializer;
-import org.jbox2d.serialization.pb.PbSerializer;
 
 /**
  * @author Daniel Murphy
@@ -72,8 +66,6 @@ import org.jbox2d.serialization.pb.PbSerializer;
 public abstract class TestbedTest
     implements
       ContactListener,
-      ObjectListener,
-      ObjectSigner,
       UnsupportedListener {
   public static final int MAX_CONTACT_POINTS = 4048;
   public static final float ZOOM_SCALE_DIFF = .05f;
@@ -119,9 +111,6 @@ public abstract class TestbedTest
 
   private TestbedCamera camera;
 
-  private JbSerializer serializer;
-  private JbDeserializer deserializer;
-
   private final Transform identity = new Transform();
 
   public TestbedTest() {
@@ -129,55 +118,7 @@ public abstract class TestbedTest
     for (int i = 0; i < MAX_CONTACT_POINTS; i++) {
       points[i] = new ContactPoint();
     }
-    serializer = new PbSerializer(this, new SignerAdapter(this) {
-      @Override
-      public Long getTag(Body argBody) {
-        if (isSaveLoadEnabled()) {
-          if (argBody == groundBody) {
-            return GROUND_BODY_TAG;
-          } else if (argBody == bomb) {
-            return BOMB_TAG;
-          }
-        }
-        return super.getTag(argBody);
-      }
 
-      @Override
-      public Long getTag(Joint argJoint) {
-        if (isSaveLoadEnabled()) {
-          if (argJoint == mouseJoint) {
-            return MOUSE_JOINT_TAG;
-          }
-        }
-        return super.getTag(argJoint);
-      }
-    });
-    deserializer = new PbDeserializer(this, new ListenerAdapter(this) {
-      @Override
-      public void processBody(Body argBody, Long argTag) {
-        if (isSaveLoadEnabled()) {
-          if (argTag == GROUND_BODY_TAG) {
-            groundBody = argBody;
-            return;
-          } else if (argTag == BOMB_TAG) {
-            bomb = argBody;
-            return;
-          }
-        }
-        super.processBody(argBody, argTag);
-      }
-
-      @Override
-      public void processJoint(Joint argJoint, Long argTag) {
-        if (isSaveLoadEnabled()) {
-          if (argTag == MOUSE_JOINT_TAG) {
-            mouseJoint = (MouseJoint) argJoint;
-            return;
-          }
-        }
-        super.processJoint(argJoint, argTag);
-      }
-    });
     destructionListener = new DestructionListener() {
       public void sayGoodbye(Fixture fixture) {
         fixtureDestroyed(fixture);
@@ -239,14 +180,6 @@ public abstract class TestbedTest
     world.setDebugDraw(model.getDebugDraw());
     title = getTestName();
     initTest(deserialized);
-  }
-
-  protected JbSerializer getSerializer() {
-    return serializer;
-  }
-
-  protected JbDeserializer getDeserializer() {
-    return deserializer;
   }
 
   /**
@@ -736,46 +669,6 @@ public abstract class TestbedTest
   }
 
   @Override
-  public Long getTag(Body body) {
-    return null;
-  }
-
-  @Override
-  public Long getTag(Fixture fixture) {
-    return null;
-  }
-
-  @Override
-  public Long getTag(Joint joint) {
-    return null;
-  }
-
-  @Override
-  public Long getTag(Shape shape) {
-    return null;
-  }
-
-  @Override
-  public Long getTag(World world) {
-    return null;
-  }
-
-  @Override
-  public void processBody(Body body, Long tag) {}
-
-  @Override
-  public void processFixture(Fixture fixture, Long tag) {}
-
-  @Override
-  public void processJoint(Joint joint, Long tag) {}
-
-  @Override
-  public void processShape(Shape shape, Long tag) {}
-
-  @Override
-  public void processWorld(World world, Long tag) {}
-
-  @Override
   public boolean isUnsupported(UnsupportedObjectException exception) {
     return true;
   }
@@ -881,60 +774,3 @@ class ParticleVelocityQueryCallback implements ParticleQueryCallback {
   }
 }
 
-
-class SignerAdapter implements ObjectSigner {
-  private final ObjectSigner delegate;
-
-  public SignerAdapter(ObjectSigner argDelegate) {
-    delegate = argDelegate;
-  }
-
-  public Long getTag(World argWorld) {
-    return delegate.getTag(argWorld);
-  }
-
-  public Long getTag(Body argBody) {
-    return delegate.getTag(argBody);
-  }
-
-  public Long getTag(Shape argShape) {
-    return delegate.getTag(argShape);
-  }
-
-  public Long getTag(Fixture argFixture) {
-    return delegate.getTag(argFixture);
-  }
-
-  public Long getTag(Joint argJoint) {
-    return delegate.getTag(argJoint);
-  }
-}
-
-
-class ListenerAdapter implements ObjectListener {
-  private final ObjectListener listener;
-
-  public ListenerAdapter(ObjectListener argListener) {
-    listener = argListener;
-  }
-
-  public void processWorld(World argWorld, Long argTag) {
-    listener.processWorld(argWorld, argTag);
-  }
-
-  public void processBody(Body argBody, Long argTag) {
-    listener.processBody(argBody, argTag);
-  }
-
-  public void processFixture(Fixture argFixture, Long argTag) {
-    listener.processFixture(argFixture, argTag);
-  }
-
-  public void processShape(Shape argShape, Long argTag) {
-    listener.processShape(argShape, argTag);
-  }
-
-  public void processJoint(Joint argJoint, Long argTag) {
-    listener.processJoint(argJoint, argTag);
-  }
-}

@@ -411,60 +411,11 @@ public abstract class AbstractTestbedController {
 
 
   private void _save() {
-    SerializationResult result;
-    try {
-      result = currTest.getSerializer().serialize(currTest.getWorld());
-    } catch (UnsupportedObjectException e1) {
-      log.error("Error serializing world", e1);
-      if (errorHandler != null)
-        errorHandler.serializationError(e1, "Error serializing the object: " + e1.toString());
-      return;
-    }
 
-    try {
-      FileOutputStream fos = new FileOutputStream(currTest.getFilename());
-      result.writeTo(fos);
-      fos.flush();
-      fos.close();
-    } catch (FileNotFoundException e) {
-      log.error("File not found exception while saving", e);
-      if (errorHandler != null)
-        errorHandler.serializationError(e,
-            "File not found exception while saving: " + currTest.getFilename());
-    } catch (IOException e) {
-      log.error("Exception while writing world", e);
-      if (errorHandler != null)
-        errorHandler.serializationError(e, "Error while writing world: " + e.toString());
-    }
-    log.debug("Serialed world to " + currTest.getFilename());
   }
 
   private void _load() {
-    World w;
-    try {
-      FileInputStream fis = new FileInputStream(currTest.getFilename());
-      w = currTest.getDeserializer().deserializeWorld(fis);
-      fis.close();
-    } catch (FileNotFoundException e) {
-      log.error("File not found error while loading", e);
-      if (errorHandler != null)
-        errorHandler.serializationError(e,
-            "File not found exception while loading: " + currTest.getFilename());
-      return;
-    } catch (UnsupportedObjectException e) {
-      log.error("Error deserializing object", e);
-      if (errorHandler != null)
-        errorHandler.serializationError(e, "Error deserializing the object: " + e.toString());
-      return;
-    } catch (IOException e) {
-      log.error("Exception while reading world", e);
-      if (errorHandler != null)
-        errorHandler.serializationError(e, "Error while reading world: " + e.toString());
-      return;
-    }
-    log.debug("Deserialized world from " + currTest.getFilename());
-
-    currTest.init(w, true);
+  
   }
 }
 
