@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bb9c69d-0c3f-4c4c-b8a6-66da2f829fe7" name="Default Changelist" comment="" />
+    <list default="true" id="5bb9c69d-0c3f-4c4c-b8a6-66da2f829fe7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/PhysicalSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/jbox2d-testbed/target/" />
     <ignored path="$PROJECT_DIR$/jbox2d-library/target/" />
     <ignored path="$PROJECT_DIR$/jbox2d-serialization/target/" />
@@ -25,22 +29,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="2" />
+          <entry key="java" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="9" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="java" value="92" />
           <entry key="txt" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="JAVA" value="92" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -49,27 +55,51 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/gwtemul/org/jbox2d/common/PlatformMathUtils.java">
+        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/PhysicalSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="105">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#1958#1959#0" expanded="true" />
+                <element signature="e#2028#2029#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jbox2d-testbed-javafx/src/main/java/org/jbox2d/testbed/framework/javafx/JavaFXPanelHelper.java">
+        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="187">
+              <caret line="83" column="44" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>car</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/PhysicalSimulator.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -96,6 +126,73 @@
               <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="testbed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -107,7 +204,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541244362017" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541252820762" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -156,40 +253,40 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1175000" />
+    <option name="totallyTimeSpent" value="4383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,14 +299,19 @@
     <MESSAGE value="Added intellij project" />
     <option name="LAST_COMMIT_MESSAGE" value="Added intellij project" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/PhysicalSimulator.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/gwtemul/org/jbox2d/common/PlatformMathUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -217,10 +319,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="39" column="48" lean-forward="true" selection-end-line="378" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-testbed-javafx/src/main/java/org/jbox2d/testbed/framework/javafx/JavaFXPanelHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="144">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/gwtemul/org/jbox2d/common/PlatformMathUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/javax/swing/DefaultComboBoxModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="131" column="33" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="161" column="16" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
+          <folding>
+            <element signature="e#4898#4899#0" expanded="true" />
+            <element signature="e#4947#4948#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/FixedPendulumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/AbstractTestbedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="382" selection-start-line="382" selection-end-line="382" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/PhysicalSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#1958#1959#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="83" column="44" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="44" />
         </state>
       </provider>
     </entry>

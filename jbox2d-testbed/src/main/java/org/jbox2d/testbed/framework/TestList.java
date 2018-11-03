@@ -23,6 +23,7 @@
  ******************************************************************************/
 package org.jbox2d.testbed.framework;
 
+import org.jbox2d.testbed.tests.PhysicalSimulator;
 import org.jbox2d.testbed.tests.ApplyForce;
 import org.jbox2d.testbed.tests.BlobTest4;
 import org.jbox2d.testbed.tests.BodyTypes;
@@ -74,12 +75,14 @@ import org.jbox2d.testbed.tests.VerticalStack;
 import org.jbox2d.testbed.tests.WaveMachine;
 import org.jbox2d.testbed.tests.Web;
 
-/**
- * @author Daniel Murphy
- */
 public class TestList {
 
   public static void populateModel(TestbedModel model) {
+
+    // My Tests
+    model.addCategory("My Tests");
+    model.addTest(new PhysicalSimulator(true));
+
     // particles
     model.addCategory("Particles");
     model.addTest(new BulletTest());
