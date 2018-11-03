@@ -30,7 +30,6 @@ import org.jbox2d.testbed.framework.TestList;
 import org.jbox2d.testbed.framework.AbstractTestbedController;
 import org.jbox2d.testbed.framework.AbstractTestbedController.MouseBehavior;
 import org.jbox2d.testbed.framework.AbstractTestbedController.UpdateBehavior;
-import org.jbox2d.testbed.framework.TestbedErrorHandler;
 import org.jbox2d.testbed.framework.TestbedModel;
 import org.jbox2d.testbed.framework.TestbedController;
 
@@ -51,13 +50,7 @@ public class TestbedMain {
     // }
     TestbedModel model = new TestbedModel();
     final AbstractTestbedController controller = new TestbedController(model,
-        UpdateBehavior.UPDATE_CALLED, MouseBehavior.NORMAL, new TestbedErrorHandler() {
-          @Override
-          public void serializationError(Exception e, String message) {
-            JOptionPane.showMessageDialog(null, message, "Serialization Error",
-                JOptionPane.ERROR_MESSAGE);
-          }
-        });
+        UpdateBehavior.UPDATE_CALLED, MouseBehavior.NORMAL);
     TestPanelJ2D panel = new TestPanelJ2D(model, controller);
     model.setPanel(panel);
     model.setDebugDraw(new DebugDrawJ2D(panel, true));

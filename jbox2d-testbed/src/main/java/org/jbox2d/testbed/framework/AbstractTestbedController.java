@@ -69,18 +69,17 @@ public abstract class AbstractTestbedController {
   private final MouseBehavior mouseBehavior;
 
   private final LinkedList<QueueItem> inputQueue;
-  private final TestbedErrorHandler errorHandler;
 
   private float viewportHalfHeight;
   private float viewportHalfWidth;
 
   public AbstractTestbedController(TestbedModel argModel, UpdateBehavior behavior,
-      MouseBehavior mouseBehavior, TestbedErrorHandler errorHandler) {
+      MouseBehavior mouseBehavior) {
     model = argModel;
     inputQueue = Lists.newLinkedList();
     setFrameRate(DEFAULT_FPS);
     updateBehavior = behavior;
-    this.errorHandler = errorHandler;
+
     this.mouseBehavior = mouseBehavior;
     addListeners();
   }
