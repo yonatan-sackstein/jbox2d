@@ -968,35 +968,8 @@ public class World {
   }
 
   /**
-   * Gets the height of the dynamic tree
-   * 
-   * @return
-   */
-  public int getTreeHeight() {
-    return m_contactManager.m_broadPhase.getTreeHeight();
-  }
-
-  /**
-   * Gets the balance of the dynamic tree
-   * 
-   * @return
-   */
-  public int getTreeBalance() {
-    return m_contactManager.m_broadPhase.getTreeBalance();
-  }
-
-  /**
-   * Gets the quality of the dynamic tree
-   * 
-   * @return
-   */
-  public float getTreeQuality() {
-    return m_contactManager.m_broadPhase.getTreeQuality();
-  }
-
-  /**
    * Change the global gravity vector.
-   * 
+   *
    * @param gravity
    */
   public void setGravity(Vec2 gravity) {

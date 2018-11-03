@@ -655,18 +655,9 @@ public abstract class TestbedTest
     bombSpawning = false;
   }
 
-  /************ SERIALIZATION *************/
-
-  /**
-   * Override to enable saving and loading. Remember to also override the {@link ObjectListener} and
-   * {@link ObjectSigner} methods if you need to
-   * 
-   * @return
-   */
   public boolean isSaveLoadEnabled() {
     return false;
   }
-
 
   public void fixtureDestroyed(Fixture fixture) {}
 
