@@ -36,7 +36,7 @@ public class PhysicalSimulator extends TestbedTest {
 
             BodyDef bodyDef = new BodyDef();
             bodyDef.type = BodyType.DYNAMIC;
-            bodyDef.position.set(-5, 0);
+            bodyDef.position.set(0, -5);
             bodyDef.allowSleep = false;
             pendulum = getWorld().createBody(bodyDef);
             pendulum.createFixture(shape, 1);
