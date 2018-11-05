@@ -163,10 +163,10 @@ public abstract class TestbedTest
     BodyDef bodyDef = new BodyDef();
     groundBody = m_world.createBody(bodyDef);
 
-    init(m_world, false);
+    init(m_world);
   }
 
-  public void init(World world, boolean deserialized) {
+  public void init(World world) {
     m_world = world;
     pointCount = 0;
     stepCount = 0;
@@ -178,7 +178,7 @@ public abstract class TestbedTest
     world.setContactListener(this);
     world.setDebugDraw(model.getDebugDraw());
     title = getTestName();
-    initTest(deserialized);
+    initTest();
   }
 
   /**
@@ -292,10 +292,8 @@ public abstract class TestbedTest
   /**
    * Initializes the current test.
    * 
-   * @param deserialized if the test was deserialized from a file. If so, all physics objects are
-   *        already added.
    */
-  public abstract void initTest(boolean deserialized);
+  public abstract void initTest();
 
   /**
    * The name of the test

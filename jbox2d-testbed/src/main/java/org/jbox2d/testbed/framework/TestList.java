@@ -24,6 +24,7 @@
 package org.jbox2d.testbed.framework;
 
 import org.jbox2d.testbed.tests.PhysicalSimulator;
+import org.jbox2d.testbed.tests.test1;
 
 public class TestList {
 
@@ -31,6 +32,7 @@ public class TestList {
 
     // My Tests
     model.addCategory("My Tests");
+    model.addTest(new test1());
     model.addTest(new PhysicalSimulator(true));
   }
 }

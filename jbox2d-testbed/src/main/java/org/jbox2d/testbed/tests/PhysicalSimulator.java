@@ -22,10 +22,7 @@ public class PhysicalSimulator extends TestbedTest {
     }
 
     @Override
-    public void initTest(boolean deserialized) {
-        if (deserialized) {
-            return;
-        }
+    public void initTest() {
         Body pendulum;
         Body ground;
 

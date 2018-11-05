@@ -47,7 +47,8 @@ public class TestbedCamera {
   public TestbedCamera(Vec2 initPosition, float initScale, float zoomScaleDiff) {
     Preconditions.checkArgument(zoomScaleDiff > 0, "Zoom scale %d must be > 0", zoomScaleDiff);
     this.transform = new OBBViewportTransform();
-    transform.setCamera(initPosition.x, initPosition.y, initScale);
+    //transform.setCamera(initPosition.x, initPosition.y, initScale);
+    transform.setCamera(0,0, 100);
     this.initPosition.set(initPosition);
     this.initScale = initScale;
     upScale = Mat22.createScaleTransform(1 + zoomScaleDiff);
