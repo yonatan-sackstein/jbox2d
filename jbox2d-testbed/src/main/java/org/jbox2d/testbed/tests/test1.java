@@ -6,6 +6,7 @@ import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.Body;
 import org.jbox2d.dynamics.BodyDef;
 import org.jbox2d.dynamics.BodyType;
+import org.jbox2d.dynamics.Fixture;
 import org.jbox2d.dynamics.joints.RevoluteJointDef;
 import org.jbox2d.pooling.arrays.Vec2Array;
 import org.jbox2d.testbed.framework.TestbedTest;
@@ -30,9 +31,11 @@ public class test1 extends TestbedTest {
             polygon.set(vertices, 3);
 
             BodyDef bodyDef = new BodyDef();
-            bodyDef.type = BodyType.STATIC;
+            bodyDef.type = BodyType.DYNAMIC;
             triangle = getWorld().createBody(bodyDef);
-            triangle.createFixture(polygon, 1);
+            Fixture fixture = triangle.createFixture(polygon, 1);
+            fixture.m_friction = 0;
+            fixture.m_density = 100;
         }
 
         {
