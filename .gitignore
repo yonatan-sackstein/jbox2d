@@ -5,4 +5,3 @@ target/
 .project
 .classpath
 vim.exe.stackdump
-.idea/workspace.xml
