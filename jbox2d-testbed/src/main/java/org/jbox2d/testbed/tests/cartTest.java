@@ -20,9 +20,9 @@ public class cartTest extends TestbedTest {
             groundBody.createFixture(groundBox, 0.0f);
         }
 
-        float[] cartPos = {0.0f, 2.0f};
         float[] cartDim = {2f, 0.5f};
-        Cart cart1 = new Cart(getWorld(), cartPos, cartDim);
+        float[] cartPos = {0.0f, 2.0f};
+        Cart cart1 = new Cart(getWorld(), cartDim, cartPos, 0.5f);
 
         getCamera().setCamera(new Vec2(1,1));
     }

@@ -11,10 +11,9 @@ public class Cart {
     public float wheelRadiusScale = 0.25f; // The scale of the radius of the wheel in terms of cartDim[0]
     public float wheelsRelativePos = 0.67f; // The multiplier of the shift of the wheel holders from the cart body
     // center in in terms of cartDim[0]
-//        float wheelRadiusScale = 0.25f;
     public  int cartGroupIndex = -1; // bodies in the same group never collide
 
-    Cart(World world, float[] cartPos, float[] cartDim) {
+    Cart(World world, float[] cartDim, float[] cartPos, float angle) {
 
         float wheelRadius = wheelRadiusScale * cartDim[0];
         float wheelMargin = wheelRadiusScale * cartDim[0] / 2;
@@ -26,6 +25,7 @@ public class Cart {
         BodyDef cartBodyDef = new BodyDef();;
         cartBodyDef.position.set(cartPos[0], cartPos[1]);
         cartBodyDef.type = BodyType.DYNAMIC;
+        cartBodyDef.setAngle(angle);
         Body cartBody = world.createBody(cartBodyDef);
 
         // Creating main cart body shape
