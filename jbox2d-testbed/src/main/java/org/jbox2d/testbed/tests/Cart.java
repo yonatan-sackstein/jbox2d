@@ -6,17 +6,23 @@ import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.*;
 import org.jbox2d.dynamics.joints.RevoluteJointDef;
 
-public class Cart {
+class Cart {
 
     public float wheelRadiusScale = 0.25f; // The scale of the radius of the wheel in terms of cartDim[0]
     public float wheelsRelativePos = 0.67f; // The multiplier of the shift of the wheel holders from the cart body
     // center in in terms of cartDim[0]
-    public  int cartGroupIndex = -1; // bodies in the same group never collide
+    public int cartGroupIndex = -1; // bodies in the same group never collide
+    Body body;
+
+    private float[] bodyDimensions;
+    private float wheelRadius;
+    private float wheelMargin;
 
     Cart(World world, float[] cartDim, float[] cartPos, float angle) {
 
-        float wheelRadius = wheelRadiusScale * cartDim[0];
-        float wheelMargin = wheelRadiusScale * cartDim[0] / 2;
+        wheelRadius = wheelRadiusScale * cartDim[0];
+        wheelMargin = wheelRadiusScale * cartDim[0] / 2;
+        bodyDimensions = cartDim;
 
         // ------------------------------------------------------------------------
         //      Creating cart body (main body and two wheelHolders, no wheels)
@@ -26,7 +32,7 @@ public class Cart {
         cartBodyDef.position.set(cartPos[0], cartPos[1]);
         cartBodyDef.type = BodyType.DYNAMIC;
         cartBodyDef.setAngle(angle);
-        Body cartBody = world.createBody(cartBodyDef);
+        body = world.createBody(cartBodyDef);
 
         // Creating main cart body shape
         PolygonShape cartBodyBox = new PolygonShape();
@@ -35,7 +41,7 @@ public class Cart {
         cartBodyFixtureDef.setShape(cartBodyBox);
         cartBodyFixtureDef.setDensity(1.0f);
         cartBodyFixtureDef.filter.groupIndex = cartGroupIndex;
-        cartBody.createFixture(cartBodyFixtureDef);
+        body.createFixture(cartBodyFixtureDef);
 
         // -------------------------
         //      Creating Wheels
@@ -46,7 +52,7 @@ public class Cart {
 
         // Creating Left Wheel
         Vec2 leftWheelHoldShift = new Vec2(-wheelsRelativePos * cartDim[0], -cartDim[1]-wheelMargin);
-        Vec2 leftWheelCenter = cartBody.getWorldPoint(leftWheelHoldShift);
+        Vec2 leftWheelCenter = body.getWorldPoint(leftWheelHoldShift);
 
         BodyDef leftWheelBodyDef = new BodyDef();
         leftWheelBodyDef.position.set(leftWheelCenter);
@@ -56,16 +62,17 @@ public class Cart {
         leftWheelFixtureDef.setShape(wheelShape);
         leftWheelFixtureDef.setDensity(1.0f);
         leftWheelFixtureDef.filter.groupIndex = cartGroupIndex;
-        leftWheel.createFixture(leftWheelFixtureDef);
+        Fixture leftWheelFixture = leftWheel.createFixture(leftWheelFixtureDef);
+        leftWheelFixture.setFriction(0);
 
         // Connecting left wheel to cart
         RevoluteJointDef leftWheelJointDef = new RevoluteJointDef();
-        leftWheelJointDef.initialize(cartBody, leftWheel, leftWheelCenter);
+        leftWheelJointDef.initialize(body, leftWheel, leftWheelCenter);
         world.createJoint(leftWheelJointDef);
 
         // Creating Right Wheel
         Vec2 rightWheelHoldShift = new Vec2(wheelsRelativePos * cartDim[0], -cartDim[1]-wheelMargin);
-        Vec2 rightwheelCenter = cartBody.getWorldPoint(rightWheelHoldShift);
+        Vec2 rightwheelCenter = body.getWorldPoint(rightWheelHoldShift);
 
         BodyDef rightWheelBodyDef = new BodyDef();
         rightWheelBodyDef.position.set(rightwheelCenter);
@@ -75,11 +82,16 @@ public class Cart {
         rightWheelFixtureDef.setShape(wheelShape);
         rightWheelFixtureDef.setDensity(1.0f);
         rightWheelFixtureDef.filter.groupIndex = cartGroupIndex;
-        rightWheel.createFixture(rightWheelFixtureDef);
+        Fixture rightWheelFixture = rightWheel.createFixture(rightWheelFixtureDef);
+        rightWheelFixture.setFriction(0);
 
         // Connecting right wheel to cart
         RevoluteJointDef rightWheelJointDef = new RevoluteJointDef();
-        rightWheelJointDef.initialize(cartBody, rightWheel, rightwheelCenter);
+        rightWheelJointDef.initialize(body, rightWheel, rightwheelCenter);
         world.createJoint(rightWheelJointDef);
+    }
+
+    public Vec2 getOuterHalfDimentions() {
+        return new Vec2(bodyDimensions[0], bodyDimensions[1] + wheelRadius + wheelMargin);
     }
 }
