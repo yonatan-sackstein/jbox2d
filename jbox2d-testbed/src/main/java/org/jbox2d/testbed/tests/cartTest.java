@@ -33,12 +33,14 @@ public class cartTest extends TestbedTest {
 
         // Creating cart
         float[] cartDim = {2f, 0.5f};
-        float[] cartPos = {0.0f, 2.0f};
-        Cart cart = new Cart(getWorld(), cartDim, cartPos, 0.5f);
+        float[] cart1Pos = {0.0f, 2.0f};
+        float[] cart2Pos = {-3.0f, 2.0f};
+        Cart cart1 = new Cart(getWorld(), cartDim, cart1Pos, 0.5f);
+        Cart cart2 = new Cart(getWorld(), cartDim, cart2Pos, 0.5f);
 
         // Connecting cart to wall
-        Vec2 wallSpringAnchor = new Vec2(7.5f, cart.getOuterHalfDimentions().y);
-        Spring cart_wall_spring = new Spring(getWorld(), cart.body, groundBody, cart.body.getWorldCenter(), wallSpringAnchor);
+        Vec2 wallSpringAnchor = new Vec2(7.5f, cart1.getOuterHalfDimentions().y);
+        Spring cart_wall_spring = new Spring(getWorld(), cart1.body, groundBody, cart1.body.getWorldCenter(), wallSpringAnchor);
 
         getCamera().setCamera(new Vec2(1,1));
     }

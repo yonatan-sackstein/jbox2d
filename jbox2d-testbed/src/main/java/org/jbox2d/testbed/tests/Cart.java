@@ -8,10 +8,10 @@ import org.jbox2d.dynamics.joints.RevoluteJointDef;
 
 class Cart {
 
-    public float wheelRadiusScale = 0.25f; // The scale of the radius of the wheel in terms of cartDim[0]
-    public float wheelsRelativePos = 0.67f; // The multiplier of the shift of the wheel holders from the cart body
+    public static float wheelRadiusScale = 0.25f; // The scale of the radius of the wheel in terms of cartDim[0]
+    public static float wheelsRelativePos = 0.67f; // The multiplier of the shift of the wheel holders from the cart body
     // center in in terms of cartDim[0]
-    public int cartGroupIndex = -1; // bodies in the same group never collide
+    private static int cartGroupIndex = -1; // bodies in the same group never collide
     Body body;
 
     private float[] bodyDimensions;
@@ -19,6 +19,8 @@ class Cart {
     private float wheelMargin;
 
     Cart(World world, float[] cartDim, float[] cartPos, float angle) {
+
+        cartGroupIndex += 1;
 
         wheelRadius = wheelRadiusScale * cartDim[0];
         wheelMargin = wheelRadiusScale * cartDim[0] / 2;
@@ -63,7 +65,6 @@ class Cart {
         leftWheelFixtureDef.setDensity(1.0f);
         leftWheelFixtureDef.filter.groupIndex = cartGroupIndex;
         Fixture leftWheelFixture = leftWheel.createFixture(leftWheelFixtureDef);
-        leftWheelFixture.setFriction(0);
 
         // Connecting left wheel to cart
         RevoluteJointDef leftWheelJointDef = new RevoluteJointDef();
@@ -83,7 +84,6 @@ class Cart {
         rightWheelFixtureDef.setDensity(1.0f);
         rightWheelFixtureDef.filter.groupIndex = cartGroupIndex;
         Fixture rightWheelFixture = rightWheel.createFixture(rightWheelFixtureDef);
-        rightWheelFixture.setFriction(0);
 
         // Connecting right wheel to cart
         RevoluteJointDef rightWheelJointDef = new RevoluteJointDef();
