@@ -1,5 +1,7 @@
 package org.jbox2d.testbed.tests;
 
+import org.jbox2d.collision.shapes.ChainShape;
+import org.jbox2d.collision.shapes.EdgeShape;
 import org.jbox2d.collision.shapes.PolygonShape;
 import org.jbox2d.common.Transform;
 import org.jbox2d.common.Vec2;
@@ -28,21 +30,34 @@ public class cartTest extends TestbedTest {
             wallBoxVertices[3] = new Vec2(5, 15);
             PolygonShape wallBox = new PolygonShape();
             wallBox.set(wallBoxVertices, 4);
-            groundBody.createFixture(wallBox, 0.0f);
+            groundBody.createFixture(wallBox, 0);
+
+            Vec2[] slopeGroundVertices = new Vec2[3];
+            slopeGroundVertices[0] = new Vec2(-30,10);
+            slopeGroundVertices[1] = new Vec2(-15,10);
+            slopeGroundVertices[2] = new Vec2(-30, 20);
+            PolygonShape slopeGround = new PolygonShape();
+            slopeGround.set(slopeGroundVertices, 3);
+            groundBody.createFixture(slopeGround, 0);
+
         }
 
         // Creating cart
         float[] cartDim = {2f, 0.5f};
-        float[] cart1Pos = {0.0f, 2.0f};
-        float[] cart2Pos = {-3.0f, 2.0f};
-        Cart cart1 = new Cart(getWorld(), cartDim, cart1Pos, 0.5f);
-        Cart cart2 = new Cart(getWorld(), cartDim, cart2Pos, 0.5f);
+        float[] cart1Pos = {-2f, 0.0f};
+        float[] cart2Pos = {-28.0f, 20.0f};
+        Cart cart1 = new Cart(getWorld(), cartDim, cart1Pos, 0);
+        Cart cart2 = new Cart(getWorld(), cartDim, cart2Pos, -0.5f);
 
         // Connecting cart to wall
+        Spring.springFrequency = 0.5f;
         Vec2 wallSpringAnchor = new Vec2(7.5f, cart1.getOuterHalfDimentions().y);
-        Spring cart_wall_spring = new Spring(getWorld(), cart1.body, groundBody, cart1.body.getWorldCenter(), wallSpringAnchor);
 
-        getCamera().setCamera(new Vec2(1,1));
+        Spring cart_wall_spring = new Spring(getWorld(), cart1.body, groundBody,
+                cart1.body.getWorldCenter(), wallSpringAnchor);
+
+
+        getCamera().setCamera(new Vec2(1,1), 10);
     }
 
     @Override
