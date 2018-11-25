@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bb9c69d-0c3f-4c4c-b8a6-66da2f829fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/AngleBodyTypeInterpreter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/RectBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/jbox2d-library/target/" />
     <ignored path="$PROJECT_DIR$/jbox2d-serialization/target/" />
@@ -87,39 +81,58 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="31" />
+          <entry key="gitignore" value="4" />
           <entry key="java" value="17673" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="17673" />
-          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="PLAIN_TEXT" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="3" />
           <entry key="java" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="95" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+            <state relative-caret-position="165">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -180,6 +193,7 @@
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Polyg.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -321,6 +335,51 @@
               <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="testbed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="testbed" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -331,7 +390,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/goshatsintsadze/טכניון/סמסטר 7/פרויקט ב׳/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java&#10;tes&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java&#10;camera&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543168240489" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543168779273" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -394,7 +453,7 @@
       <workItem from="1542798700026" duration="6446000" />
       <workItem from="1543008668232" duration="6000" />
       <workItem from="1543071363457" duration="372000" />
-      <workItem from="1543163690060" duration="3355000" />
+      <workItem from="1543163690060" duration="3762000" />
     </task>
     <task id="LOCAL-00001" summary="Tried changing static &lt;-&gt; dynamic bodyTypes.&#10;Tried changing the friction and density parameters of fixtures.">
       <created>1541450940698</created>
@@ -407,7 +466,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106217000" />
+    <option name="totallyTimeSpent" value="106624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -491,7 +550,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/shalom/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
@@ -516,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-731">
           <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -772,20 +824,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+        <state relative-caret-position="165">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
