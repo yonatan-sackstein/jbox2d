@@ -12,7 +12,7 @@ import org.jbox2d.dynamics.joints.RevoluteJointDef;
  *
  * Class that contains a rectangular body, and two circle bodies connected to it using revolve (revolute) joint
  */
-class Cart {
+public class Cart {
 
     public static float wheelRadiusScale = 0.25f; // The scale of the radius of the wheel in terms of cartDim[0]
     public static float wheelsRelativePos = 0.67f; // The multiplier of the shift of the wheel holders from the cart
@@ -25,6 +25,8 @@ class Cart {
     private float wheelRadius;
     private float wheelMargin;
 
+    // TODO: Reduce to one constructor
+
     /**
      * Creates a cart body (main rectangle and two circles for wheels)
      * The relations that define the wheels position and scale are defined using the static Cart class variables:
@@ -35,7 +37,7 @@ class Cart {
      * @param dimension Half width and half height of the main rectangle body
      * @param angle     Optional - The angle of the cart (radians)
      */
-    Cart(World world, Vec2 position, Vec2 dimension, float... angle) {
+    public Cart(World world, Vec2 position, Vec2 dimension, float... angle) {
         createCart(world, position, dimension, angle);
     }
 
