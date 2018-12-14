@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bb9c69d-0c3f-4c4c-b8a6-66da2f829fe7" name="Default Changelist" comment="" />
+    <list default="true" id="5bb9c69d-0c3f-4c4c-b8a6-66da2f829fe7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jbox2d_jbox2d_serialization_2_3_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jbox2d-serialization/target/classes/proto/box2d.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jbox2d-testbed-jogl/target/classes/log4j.xml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/jbox2d-library/target/" />
     <ignored path="$PROJECT_DIR$/jbox2d-serialization/target/" />
     <ignored path="$PROJECT_DIR$/jbox2d-testbed-javafx/target/" />
@@ -31,30 +37,22 @@
     <expand />
     <select />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="419999004">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,6 +115,12 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand />
@@ -135,8 +139,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,47 +151,13 @@
             <path>
               <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="testbed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,16 +166,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/goshatsintsadze/טכניון/סמסטר 7/פרויקט ב׳/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java&#10;tes&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java&#10;camera&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java" />
+    <property name="SearchEverywhereHistoryKey" value="mathTest&#9;FILE&#9;jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/jdk.internal.vm.compiler/org.graalvm.compiler.replacements.test/src/org/graalvm/compiler/replacements/test/UnsignedMathTest.java&#10;tes&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java&#10;camera&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544779979051" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.37816092" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
@@ -228,7 +198,7 @@
   </component>
   <component name="RunManager">
     <configuration name="TestbedMain" type="Application" factoryName="Application" singleton="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="JDK-11.0.1" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.jbox2d.testbed.framework.j2d.TestbedMain" />
       <module name="jbox2d-testbed" />
@@ -276,23 +246,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109058000" />
+    <option name="totallyTimeSpent" value="109613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27948305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30484116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13287671" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13256955" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,8 +269,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.299509" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49919224" weight="0.32876712" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49919224" weight="0.32733223" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24959612" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -314,6 +282,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32956383" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" />
       <window_info anchor="right" x="0" y="0" width="270" height="600" id="Documentation" order="10" side_tool="true" weight="0.32956383" />
+      <window_info anchor="right" id="Maven" order="11" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27382874" />
@@ -508,28 +477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2708">
-          <caret line="312" column="22" lean-forward="true" selection-start-line="312" selection-start-column="22" selection-end-line="312" selection-end-column="22" />
-          <folding>
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#6404#6405#0" expanded="true" />
-            <element signature="e#7451#7452#0" expanded="true" />
-            <element signature="e#7483#7484#0" expanded="true" />
-            <element signature="e#7588#7589#0" expanded="true" />
-            <element signature="e#7607#7608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4610">
-          <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Rectangle.java" />
     <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/collision/shapes/PolygonShape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -541,17 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-434">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#3019#3020#0" expanded="true" />
-            <element signature="e#3050#3051#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,65 +571,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/.travis.yml" />
+    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/src/site/site.xml" />
+    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/src/main/resources/META-INF/services/com.fasterxml.jackson.core.JsonFactory" />
+    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/src/main/resources/META-INF/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/README.md" />
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/JacksonObjectMapperExample.java" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/test1.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/pom.xml">
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/src/site/site.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/src/main/resources/META-INF/services/com.fasterxml.jackson.core.JsonFactory">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/src/main/resources/META-INF/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jackson-core-jackson-core-2.9.7/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/JacksonObjectMapperExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="37" />
+        <state relative-caret-position="420">
+          <caret line="296" selection-start-line="296" selection-end-line="296" />
           <folding>
-            <element signature="e#1454#1462#0" expanded="true" />
-            <element signature="e#1612#1628#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#6380#6381#0" expanded="true" />
+            <element signature="e#6404#6405#0" expanded="true" />
+            <element signature="e#7451#7452#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
+            <element signature="e#7588#7589#0" expanded="true" />
+            <element signature="e#7607#7608#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="26">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/jdk.internal.vm.compiler/org.graalvm.compiler.replacements.test/src/org/graalvm/compiler/replacements/test/UnsignedMathTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -736,7 +659,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>JDK-11.0.1</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -748,12 +671,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>jbox2d</last-edited>
+          <last-edited>jbox2d-testbed</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
-                <option value="0.6" />
+                <option value="0.37816092" />
               </list>
             </option>
           </splitter-proportions>
@@ -761,11 +683,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.jbox2d:jbox2d-serialization:2.3.1-SNAPSHOT</last-edited>
+          <last-edited>Maven: com.google.guava:guava:14.0.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37816092" />
               </list>
             </option>
           </splitter-proportions>
