@@ -1,8 +1,0 @@
-target/
-.DS_Store
-.settings/
-*.log
-.project
-.classpath
-vim.exe.stackdump
-.idea/
