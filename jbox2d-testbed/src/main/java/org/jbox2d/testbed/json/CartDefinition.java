@@ -12,14 +12,14 @@ public class CartDefinition {
     public String BodyCenter;
     public int BodyWidth;
     public int BodyHeight;
-    public float RotationDegrees;
+    public float Angle;
 
     public void Draw(World world)
     {
         Vec2 bodyCenter = jsonReader.toVec2(BodyCenter);
         Vec2 cartDim = new Vec2(BodyWidth, BodyHeight);
 
-        new Cart(world, bodyCenter, cartDim, RotationDegrees);
+        new Cart(world, bodyCenter, cartDim, Angle);
     }
 
 }

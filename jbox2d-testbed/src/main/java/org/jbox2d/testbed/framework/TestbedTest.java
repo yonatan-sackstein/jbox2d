@@ -143,7 +143,9 @@ public abstract class TestbedTest
         particleGroupDestroyed(group);
       }
     };
-    camera = new TestbedCamera(getDefaultCameraPos(), getDefaultCameraScale(), ZOOM_SCALE_DIFF);
+
+      //camera = new TestbedCamera(getDefaultCameraPos(), getDefaultCameraScale(), ZOOM_SCALE_DIFF);
+      camera = new TestbedCamera(getDefaultCameraPos(), getDefaultCameraScale(), ZOOM_SCALE_DIFF);
   }
 
   public void init(TestbedModel model) {
@@ -177,6 +179,10 @@ public abstract class TestbedTest
     world.setParticleDestructionListener(particleDestructionListener);
     world.setContactListener(this);
     world.setDebugDraw(model.getDebugDraw());
+
+    // Initially paused
+    model.getSettings().pause = true;
+
     title = getTestName();
     initTest();
   }

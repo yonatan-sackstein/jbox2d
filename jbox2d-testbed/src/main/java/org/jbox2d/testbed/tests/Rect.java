@@ -13,7 +13,7 @@ import org.jbox2d.dynamics.*;
  * Class that creates a STATIC rectangular shape, in a given body or in a new one.
  */
 public class Rect {
-    Body body;
+    public Body body;
 
     /**
      * Creates a rectangular shape in the given body or as new STATIC body.
@@ -25,7 +25,7 @@ public class Rect {
      *                      | float     angle   - the angle of the rectangle (radians)
      *                      | Body      bodyToAddTo - the body in which to create the rect shape
      */
-    Rect(World world, Vec2 position, Vec2 dimensions, Object... vararg) {
+    public Rect(World world, Vec2 position, Vec2 dimensions, Object... vararg) {
         createRectangle(world, position, dimensions.x, dimensions.y, vararg);
     }
 

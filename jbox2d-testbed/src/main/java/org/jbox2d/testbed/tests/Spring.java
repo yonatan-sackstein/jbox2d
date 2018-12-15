@@ -53,7 +53,7 @@ public class Spring {
      * @param anchor1   The connection point on the first body
      * @param anchor2   The connection point on the second body
      */
-    Spring(World world, Body body1, Body body2, Vec2 anchor1, Vec2 anchor2) {
+    public Spring(World world, Body body1, Body body2, Vec2 anchor1, Vec2 anchor2) {
 
         // Crate distance joint which provides the physical spring properties
         DistanceJointDef springJointDef = new DistanceJointDef();

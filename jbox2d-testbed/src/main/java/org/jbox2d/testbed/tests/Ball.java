@@ -35,7 +35,7 @@ public class Ball {
      * @param radius    Radius of the ball
      * @param dynamic   Optional - Ball is STATIC or DYNAMIC
      */
-    Ball(World world, Vec2 position, float radius, boolean... dynamic) {
+    public Ball(World world, Vec2 position, float radius, boolean... dynamic) {
         createBall(world, position, radius, dynamic);
     }
 

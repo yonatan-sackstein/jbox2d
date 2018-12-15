@@ -14,12 +14,12 @@ import java.util.logging.Logger;
 
 public class jsonReader {
 
-    public static Composition fromJSON() {
+    public static Composition fromJSON(String fileName) {
         Gson gson = new Gson();
 
         FileReader fr = null;
         try {
-            fr = new FileReader("Synthetic_1.json");
+            fr = new FileReader(fileName);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(cartTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -37,33 +37,31 @@ public class jsonReader {
             def.Draw(world);
         }
 
-        /*for (BallDefinition def : comp.Balls){
-            def.Draw();
+        for (BallDefinition def : comp.Balls){
+            def.Draw(world);
         }
 
         for (WallDefinition def : comp.Walls){
-            def.Draw();
+            def.Draw(world);
         }
 
         for (BlockDefinition def : comp.Blocks){
-            def.Draw();
+            def.Draw(world);
         }
 
         for (LineDefinition def : comp.Lines){
-            def.Draw();
+            def.Draw(world);
         }
 
         for (SpringDefinition def : comp.Springs){
-            def.Draw();
+            def.Draw(world);
         }
 
         for (TriangleDefinition def : comp.Triangles){
-            def.Draw();
-        }*/
+            def.Draw(world);
+        }
 
     }
-
-
 
     public static Vec2 toVec2(String point)
     {

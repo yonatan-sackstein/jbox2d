@@ -67,7 +67,7 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
 
   public JComboBox tests;
 
-  private JButton pauseButton = new JButton("Pause");
+  private JButton pauseButton = new JButton("Resume");
   private JButton stepButton = new JButton("Step");
   private JButton resetButton = new JButton("Reset");
   private JButton quitButton = new JButton("Quit");

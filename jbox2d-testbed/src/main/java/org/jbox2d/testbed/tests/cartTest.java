@@ -1,9 +1,11 @@
 package org.jbox2d.testbed.tests;
 
+import org.jbox2d.common.MathUtils;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.World;
 import org.jbox2d.testbed.framework.TestbedTest;
 import org.jbox2d.testbed.json.Composition;
+import org.jbox2d.testbed.json.TriangleDefinition;
 import org.jbox2d.testbed.json.jsonReader;
 
 public class cartTest extends TestbedTest {
@@ -11,11 +13,8 @@ public class cartTest extends TestbedTest {
     @Override
     public void initTest() {
 
-
         World world = getWorld();
-        Composition comp = jsonReader.fromJSON();
-        jsonReader.CompositionDecoder(comp, world);
-        
+
         // Creating rectangular ground (with right wall)
         Rect ground = new Rect(world, 0, -10, 50, 10, 0.1f, false);
         new Rect(world, 45, 9, 5, 5, 0.1f, false);
@@ -40,19 +39,12 @@ public class cartTest extends TestbedTest {
         new Ball(world, 14, 15, 2, false);
         new Ball(world, new Vec2(18, 40), 1);
 
-        new Poly(world, true, new Vec2(0,20),
+        new Poly(world, true, 0, new Vec2(0,20),
                                              new Vec2(10,20),
                                              new Vec2(0, 25));
 
-
-        getCamera().setCamera(new Vec2(1,1), 8);
-
-
+        getCamera().setCamera(new Vec2(500,-500), 0.5f);
     }
-
-
-
-
 
     @Override
     public String getTestName() {

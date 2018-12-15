@@ -26,12 +26,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
-import org.jbox2d.testbed.framework.TestList;
-import org.jbox2d.testbed.framework.AbstractTestbedController;
+import org.jbox2d.testbed.framework.*;
 import org.jbox2d.testbed.framework.AbstractTestbedController.MouseBehavior;
 import org.jbox2d.testbed.framework.AbstractTestbedController.UpdateBehavior;
-import org.jbox2d.testbed.framework.TestbedModel;
-import org.jbox2d.testbed.framework.TestbedController;
 
 /**
  * The entry point for the testbed application

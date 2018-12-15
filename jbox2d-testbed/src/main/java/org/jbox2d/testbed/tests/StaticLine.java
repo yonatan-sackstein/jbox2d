@@ -25,7 +25,7 @@ public class StaticLine {
      * @param vertices  All the points of the line. Can be provided as an Vec2 array or as
      *                  multiple individual Vec2 arguments
      */
-    StaticLine(World world, boolean closeLoop,  Vec2... vertices) {
+    public StaticLine(World world, boolean closeLoop,  Vec2... vertices) {
 
         // Creating body
         BodyDef ballBodyDef = new BodyDef();

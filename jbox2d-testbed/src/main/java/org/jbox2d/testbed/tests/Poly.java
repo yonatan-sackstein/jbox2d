@@ -1,11 +1,9 @@
 package org.jbox2d.testbed.tests;
 
 import org.jbox2d.collision.shapes.PolygonShape;
+import org.jbox2d.common.Transform;
 import org.jbox2d.common.Vec2;
-import org.jbox2d.dynamics.Body;
-import org.jbox2d.dynamics.BodyDef;
-import org.jbox2d.dynamics.BodyType;
-import org.jbox2d.dynamics.World;
+import org.jbox2d.dynamics.*;
 
 /**
  * @author Georgee Tsintsadze & Yonatan Sackstein
@@ -21,10 +19,11 @@ public class Poly {
      *
      * @param world     The world in which the ball is created
      * @param dynamic    If true, the body will be DYNAMIC, else it will be STATIC
+     * @param angle     Angle of the poly (radians)
      * @param vertices  All the points of the line. Can be provided as an Vec2 array or as
      *                  multiple individual Vec2 arguments
      */
-    Poly(World world, boolean dynamic, Vec2... vertices) {
+    public Poly(World world, boolean dynamic, float angle, Vec2... vertices) {
 
         // Creating body
         BodyDef polyBodyDef = new BodyDef();
@@ -34,12 +33,20 @@ public class Poly {
         else {
             polyBodyDef.type = BodyType.STATIC;
         }
+        Vec2 origin = vertices[0];
+        polyBodyDef.setPosition(origin);
+        polyBodyDef.setAngle(angle);
+
         body = world.createBody(polyBodyDef);
 
         // Creating shape
         PolygonShape polyShape = new PolygonShape();
-        polyShape.set(vertices, vertices.length);
+        vertices[0] = new Vec2(0, 0);
+        /*Transform t = new Transform();
+        t.set(origin, angle);
+        polyShape.centroid(t);*/
 
+        polyShape.set(vertices, vertices.length);
         // Creating fixture
         body.createFixture(polyShape, 1);
     }
