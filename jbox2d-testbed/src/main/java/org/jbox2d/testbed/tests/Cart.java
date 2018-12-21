@@ -25,7 +25,7 @@ public class Cart {
     private float wheelRadius;
     private float wheelMargin;
 
-    // TODO: Reduce to one constructor
+    // TODO: Reduce to one constructor (only the public one is needed)
 
     /**
      * Creates a cart body (main rectangle and two circles for wheels)

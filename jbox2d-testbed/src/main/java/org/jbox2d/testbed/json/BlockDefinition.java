@@ -10,15 +10,16 @@ public class BlockDefinition {
     public double Height;
     public double Width;
     public float Angle;
-    public Boolean IsStatic; // TODO: not used
+    public boolean IsStatic;
 
 
-    public void Draw(World world)
+    public void Draw(World world, double proportionX, double proportionY)
     {
-        Vec2 center = jsonReader.toVec2(Center);
-        Vec2 dim = new Vec2((int)Width/2, (int)Height/2);
+        Vec2 center = jsonReader.proportionate(jsonReader.toVec2(Center), proportionX, proportionY);
 
-        new Rect(world, center, dim, Angle);
+        Vec2 dim = jsonReader.proportionate(new Vec2((int)Width/2, (int)Height/2), proportionX, proportionY);
+
+        new Rect(world, center, dim, !IsStatic, Angle);
     }
 
 }

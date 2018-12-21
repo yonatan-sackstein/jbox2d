@@ -9,10 +9,11 @@ public class LineDefinition {
     public String A;
     public String B;
 
-    public void Draw(World world)
+    public void Draw(World world, double proportionX, double proportionY)
     {
-        Vec2 a = jsonReader.toVec2(A);
-        Vec2 b = jsonReader.toVec2(B);
+        Vec2 a = jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);
+
+        Vec2 b = jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);
 
         new StaticLine(world, false, a, b);
     }

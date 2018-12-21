@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bb9c69d-0c3f-4c4c-b8a6-66da2f829fe7" name="Default Changelist" comment="Tried changing static &lt;-&gt; dynamic bodyTypes.&#10;Tried changing the friction and density parameters of fixtures.">
-      <change afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JBox2d.log" beforeDir="false" afterPath="$PROJECT_DIR$/JBox2d.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Synthetic_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Synthetic_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/collision/AABB.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/collision/AABB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Synthetic_78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Synthetic_78.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedSidePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedSidePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BallDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BallDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BlockDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BlockDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/CartDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/CartDefinition.java" afterDir="false" />
@@ -21,12 +15,10 @@
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/WallDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/WallDefinition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Spring.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Spring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/StaticLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/StaticLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/jbox2d-library/target/" />
     <ignored path="$PROJECT_DIR$/jbox2d-serialization/target/" />
@@ -61,42 +53,45 @@
     <session id="419999004">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="4" />
-          <entry key="java" value="133" />
-          <entry key="jpg" value="4" />
-          <entry key="json" value="9" />
+          <entry key="class" value="5" />
+          <entry key="java" value="188" />
+          <entry key="jpg" value="15" />
+          <entry key="json" value="11" />
           <entry key="png" value="1" />
+          <entry key="ts" value="1" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="Image" value="5" />
-          <entry key="JAVA" value="133" />
-          <entry key="JSON" value="9" />
+          <entry key="CLASS" value="5" />
+          <entry key="Image" value="16" />
+          <entry key="JAVA" value="188" />
+          <entry key="JSON" value="11" />
+          <entry key="TypeScript" value="1" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3292" />
+          <entry key="java" value="5197" />
           <entry key="json" value="15" />
           <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3292" />
+          <entry key="JAVA" value="5197" />
           <entry key="JSON" value="15" />
           <entry key="XML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -104,15 +99,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Synthetic_78.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="36" column="57" lean-forward="true" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java">
+        <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+            <state relative-caret-position="67">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,9 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>type</find>
-      <find>def</find>
-      <find>da</find>
       <find>bu</find>
       <find>tran</find>
       <find>Body(</find>
@@ -161,10 +160,14 @@
       <find>DrawStats</find>
       <find>a tes</find>
       <find>TestList</find>
+      <find>Bol</find>
+      <find>def</find>
+      <find>def.Draw(world)</find>
     </findStrings>
     <replaceStrings>
       <replace>world</replace>
       <replace>Draw(world)</replace>
+      <replace>def.Draw(world, proportionX, proportionY)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -192,33 +195,33 @@
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Composition.java" />
         <option value="$PROJECT_DIR$/Synthetic_1.json" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonPoint.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Cart.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Ball.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/StaticLine.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/LineDefinition.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedSidePanel.java" />
         <option value="$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/common/Vec2.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/Composition.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BallDefinition.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/WallDefinition.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Spring.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java" />
         <option value="$PROJECT_DIR$/Synthetic_78.json" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BlockDefinition.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/CartDefinition.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/cartTest.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java" />
         <option value="$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/collision/AABB.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedSettings.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/ImageList.java" />
-        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/SpringDefinition.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedMain.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Cart.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BlockDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/LineDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/SpringDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/CartDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BallDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java" />
         <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/WallDefinition.java" />
+        <option value="$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java" />
       </list>
     </option>
   </component>
@@ -241,11 +244,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -269,7 +271,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,27 +322,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="j2d" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
-              <item name="jbox2d-testbed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="testbed" type="462c0819:PsiDirectoryNode" />
               <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -353,21 +334,26 @@
               <item name="testbed" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jbox2d" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbox2d" type="462c0819:PsiDirectoryNode" />
+              <item name="Synthetic Images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="DrawStats&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedSettings#DrawStats&#10;frameRa&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.AbstractTestbedController#frameRate&#10;Hz&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedSettings#Hz&#10;AABB&#9;PSI&#9;JAVA://org.jbox2d.collision.AABB&#10;profile&#9;PSI&#9;JAVA://org.jbox2d.dynamics.Profile&#10;Stats&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedTest#statsList&#10;Angle&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java&#10;panel&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedSidePanel.java&#10;stats&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedTest#statsList&#10;pause&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.j2d.TestbedSidePanel#pauseButton&#10;jsonPoint&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonPoint.java&#10;depen&#9;FILE&#9;jrt://C:/Program Files/Java/jdk-11.0.1!/jdk.compiler/com/sun/tools/sjavac/comp/dependencies&#10;dependency&#9;PSI&#9;JAVA://jdk.nashorn.internal.runtime.options.OptionTemplate#dependency&#10;mathTest&#9;FILE&#9;jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/jdk.internal.vm.compiler/org.graalvm.compiler.replacements.test/src/org/graalvm/compiler/replacements/test/UnsignedMathTest.java&#10;tes&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java&#10;camera&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java" />
+    <property name="SearchEverywhereHistoryKey" value="BSLL&#9;PSI&#9;JAVA://java.lang.invoke.BoundMethodHandle$Species_LL&#10;define &#9;null&#9;null&#10;Boolean&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedSetting.ConstraintType#BOOLEAN&#10;DrawStats&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedSettings#DrawStats&#10;frameRa&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.AbstractTestbedController#frameRate&#10;Hz&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedSettings#Hz&#10;AABB&#9;PSI&#9;JAVA://org.jbox2d.collision.AABB&#10;profile&#9;PSI&#9;JAVA://org.jbox2d.dynamics.Profile&#10;Stats&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedTest#statsList&#10;Angle&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java&#10;panel&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/j2d/TestbedSidePanel.java&#10;stats&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.TestbedTest#statsList&#10;pause&#9;PSI&#9;JAVA://org.jbox2d.testbed.framework.j2d.TestbedSidePanel#pauseButton&#10;jsonPoint&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonPoint.java&#10;depen&#9;FILE&#9;jrt://C:/Program Files/Java/jdk-11.0.1!/jdk.compiler/com/sun/tools/sjavac/comp/dependencies&#10;dependency&#9;PSI&#9;JAVA://jdk.nashorn.internal.runtime.options.OptionTemplate#dependency&#10;mathTest&#9;FILE&#9;jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/jdk.internal.vm.compiler/org.graalvm.compiler.replacements.test/src/org/graalvm/compiler/replacements/test/UnsignedMathTest.java&#10;tes&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java&#10;camera&#9;FILE&#9;file://C:/Users/Danielle/Downloads/jbox2d/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544910083092" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545382972030" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -378,7 +364,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danielle\Downloads\jbox2d" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -386,7 +372,7 @@
       <recent name="org.jbox2d.testbed.tests" />
       <recent name="org.jbox2d.testbed.json" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Danielle\Downloads\jbox2d" />
     </key>
   </component>
@@ -440,7 +426,8 @@
       <workItem from="1543071363457" duration="372000" />
       <workItem from="1543163690060" duration="3762000" />
       <workItem from="1544779113350" duration="550000" />
-      <workItem from="1544792540002" duration="34007000" />
+      <workItem from="1544792540002" duration="34613000" />
+      <workItem from="1545208500862" duration="33882000" />
     </task>
     <task id="LOCAL-00001" summary="Tried changing static &lt;-&gt; dynamic bodyTypes.&#10;Tried changing the friction and density parameters of fixtures.">
       <created>1541450940698</created>
@@ -453,7 +440,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150688000" />
+    <option name="totallyTimeSpent" value="185176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,7 +455,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25113463" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -476,8 +463,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32569557" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18494272" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38134205" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -512,101 +499,28 @@
     <MESSAGE value="Tried changing static &lt;-&gt; dynamic bodyTypes.&#10;Tried changing the friction and density parameters of fixtures." />
     <option name="LAST_COMMIT_MESSAGE" value="Tried changing static &lt;-&gt; dynamic bodyTypes.&#10;Tried changing the friction and density parameters of fixtures." />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="acos(Vec2.dot(heightVec, new Vec2(1,0)) / height)" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/io/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/java/awt/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/PhysicalSimulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-          <folding>
-            <element signature="docComment;class#Ball#0" />
-            <element signature="docComment;method#Ball#0;class#Ball#0" />
-            <element signature="method#Ball#0;class#Ball#0" />
-            <element signature="docComment;method#Ball#1;class#Ball#0" />
-            <element signature="method#createBall#0;class#Ball#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/StaticLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/AngleBodyTypeInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/dynamics/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/LineDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/common/MathUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -614,47 +528,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Synthetic_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BallDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/WallDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="51" column="38" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="38" />
-          <folding>
-            <element signature="e#4395#4396#0" expanded="true" />
-            <element signature="e#4421#4422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Synthetic_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic_1.json" />
+    <entry file="file://$PROJECT_DIR$/Synthetic_1.png" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/Gson.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -662,42 +537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Synthetic_78.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/Composition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/common/Vec2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3470">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="e#4099#4100#0" expanded="true" />
-            <element signature="e#4145#4146#0" expanded="true" />
-            <element signature="e#4905#4906#0" expanded="true" />
-            <element signature="e#4966#4967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Synthetic_78.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/dynamics/BodyDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
-          <folding>
-            <element signature="e#5518#5519#0" expanded="true" />
-            <element signature="e#5546#5547#0" expanded="true" />
-            <element signature="e#8273#8274#0" expanded="true" />
-            <element signature="e#8317#8318#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,26 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-end-line="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -784,56 +607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="36" column="77" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="77" />
-          <folding>
-            <element signature="docComment;class#Cart#0" />
-            <element signature="docComment;method#Cart#1;class#Cart#0" />
-            <element signature="docComment;method#Cart#2;class#Cart#0" />
-            <element signature="docComment;method#Cart#3;class#Cart#0" />
-            <element signature="method#Cart#3;class#Cart#0" />
-            <element signature="docComment;method#getOuterHalfDimensions#0;class#Cart#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BlockDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/collision/AABB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4165">
           <caret line="275" column="7" selection-start-line="275" selection-start-column="7" selection-end-line="275" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/AbstractTestbedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="e#3746#3747#0" expanded="true" />
-            <element signature="e#3775#3776#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -844,37 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/SpringDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -885,26 +635,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/ImageList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/CartDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/ImageList.java" />
     <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -925,13 +656,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java">
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/test1.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/AbstractTestbedController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="398" column="38" lean-forward="true" selection-start-line="398" selection-start-column="38" selection-end-line="398" selection-end-column="38" />
+        <state relative-caret-position="348">
+          <caret line="389" selection-start-line="389" selection-end-line="389" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#9394#9402#0" expanded="true" />
+            <element signature="e#3746#3747#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;class#Ball#0" />
+            <element signature="docComment;method#Ball#0;class#Ball#0" />
+            <element signature="method#Ball#0;class#Ball#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedSetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+          <folding>
+            <element signature="docComment;class#Cart#0" />
+            <element signature="docComment;method#Cart#1;class#Cart#0" />
+            <element signature="docComment;method#Cart#2;class#Cart#0" />
+            <element signature="docComment;method#Cart#3;class#Cart#0" />
+            <element signature="method#Cart#3;class#Cart#0" />
+            <element signature="docComment;method#getOuterHalfDimensions#0;class#Cart#0" />
           </folding>
         </state>
       </provider>
@@ -939,10 +707,253 @@
     <entry file="file://$PROJECT_DIR$/Synthetic_78.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="3510" column="4" selection-start-line="3510" selection-start-column="4" selection-end-line="3510" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/lang/invoke/BoundMethodHandle$Species_LL.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BlockDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <caret line="20" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/LineDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/TriangleDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/SpringDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic_4271.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/AngleBodyTypeInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic_5016.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="91" column="49" lean-forward="true" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/dynamics/BodyDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+          <folding>
+            <element signature="e#5518#5519#0" expanded="true" />
+            <element signature="e#5546#5547#0" expanded="true" />
+            <element signature="e#8273#8274#0" expanded="true" />
+            <element signature="e#8317#8318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/framework/TestbedCamera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+          <folding>
+            <element signature="e#2954#2955#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#4395#4396#0" expanded="true" />
+            <element signature="e#4421#4422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-library/src/main/java/org/jbox2d/common/Vec2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+          <folding>
+            <element signature="docComment;class#Vec2#0" />
+            <element signature="e#1906#1934#0" />
+            <element signature="e#1906#1998#0" />
+            <element signature="e#2002#2039#0" />
+            <element signature="e#2002#2136#0" />
+            <element signature="e#2140#2181#0" />
+            <element signature="e#2140#2272#0" />
+            <element signature="e#2276#2352#0" />
+            <element signature="e#2435#2518#0" />
+            <element signature="e#2599#2676#0" />
+            <element signature="e#2710#2711#0" expanded="true" />
+            <element signature="e#2749#2750#0" expanded="true" />
+            <element signature="e#2754#2824#0" />
+            <element signature="e#2892#2950#0" />
+            <element signature="e#2892#3031#0" />
+            <element signature="e#3035#3113#0" />
+            <element signature="e#3035#3201#0" />
+            <element signature="e#3205#3279#0" />
+            <element signature="e#3205#3383#0" />
+            <element signature="e#3387#3471#0" />
+            <element signature="e#3387#3559#0" />
+            <element signature="e#3563#3642#0" />
+            <element signature="e#3563#3727#0" />
+            <element signature="e#3874#3952#0" />
+            <element signature="e#3874#4024#0" />
+            <element signature="e#4028#4068#0" />
+            <element signature="e#4150#4198#0" />
+            <element signature="e#4273#4365#0" />
+            <element signature="e#4273#4590#0" />
+            <element signature="e#4594#4684#0" />
+            <element signature="e#4594#4818#0" />
+            <element signature="e#4822#4878#0" />
+            <element signature="e#4971#5057#0" />
+            <element signature="e#5120#5156#0" />
+            <element signature="e#5440#5561#0" />
+            <element signature="e#5866#6008#0" />
+            <element signature="e#6012#6152#0" />
+            <element signature="e#6253#6395#0" />
+            <element signature="e#6399#6539#0" />
+            <element signature="e#6543#6639#0" />
+            <element signature="e#6885#7020#0" />
+            <element signature="e#7024#7159#0" />
+            <element signature="e#7163#7210#0" />
+            <element signature="e#7163#7465#0" />
+            <element signature="e#7469#7530#0" />
+            <element signature="e#7469#7949#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/BallDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/CartDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="20" selection-start-line="19" selection-start-column="23" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic Images/Synthetic_109.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic Images/Synthetic_117.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Poly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic Images/Synthetic_93.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="22" column="22" selection-start-line="19" selection-start-column="6" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic Images/Synthetic_93.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic Images/Synthetic_96.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic Images/Synthetic_95.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/mainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" column="57" lean-forward="true" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/WallDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/tests/Rect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jbox2d-testbed/src/main/java/org/jbox2d/testbed/json/jsonReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

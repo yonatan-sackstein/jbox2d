@@ -42,9 +42,6 @@ public class Poly {
         // Creating shape
         PolygonShape polyShape = new PolygonShape();
         vertices[0] = new Vec2(0, 0);
-        /*Transform t = new Transform();
-        t.set(origin, angle);
-        polyShape.centroid(t);*/
 
         polyShape.set(vertices, vertices.length);
         // Creating fixture

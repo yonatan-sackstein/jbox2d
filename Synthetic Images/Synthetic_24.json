@@ -1,0 +1,36 @@
+{
+  "ImageFilePath": "Synthetic_24.jpg",
+  "Carts": [
+    {
+      "BodyCenter": "225, -225",
+      "BodyWidth": 118,
+      "BodyHeight": 64,
+      "Angle": -0.109083079
+    }
+  ],
+  "Balls": [
+    {
+      "Center": "225, -675",
+      "Radius": 118.125,
+      "IsStatic": false
+    }
+  ],
+  "Walls": [],
+  "Blocks": [
+    {
+      "Center": "675, -675",
+      "Height": 213.0,
+      "Width": 236.0,
+      "Angle": -3.602796,
+      "IsStatic": false
+    }
+  ],
+  "Lines": [],
+  "Springs": [
+    {
+      "A": "675, -225",
+      "B": "569, -171"
+    }
+  ],
+  "Triangles": []
+}

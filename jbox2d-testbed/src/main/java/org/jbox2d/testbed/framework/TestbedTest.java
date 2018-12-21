@@ -23,6 +23,7 @@
  ******************************************************************************/
 package org.jbox2d.testbed.framework;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

@@ -21,12 +21,34 @@ public class Rect {
      * @param world         The world in which the rectangle is created
      * @param position      Center position
      * @param dimensions    Half of the height and width of the rectangle
+     * @param dynamic       Optional - Ball is STATIC or DYNAMIC
      * @param vararg        Can be one or both, but no more than one from each of the following:
      *                      | float     angle   - the angle of the rectangle (radians)
      *                      | Body      bodyToAddTo - the body in which to create the rect shape
      */
-    public Rect(World world, Vec2 position, Vec2 dimensions, Object... vararg) {
-        createRectangle(world, position, dimensions.x, dimensions.y, vararg);
+    public Rect(World world, Vec2 position, Vec2 dimensions, boolean dynamic, Object... vararg) {
+        createRectangle(world, position, dimensions.x, dimensions.y, dynamic, vararg);
+    }
+
+    /**
+     * Creates a rectangular shape in the given body or as new STATIC body.
+     *
+     * @param world         The world in which the rectangle is created
+     * @param vertices      The four vertices of the rectangle
+     */
+    public Rect(World world, Vec2[] vertices) {
+
+        // Create shape
+        PolygonShape rectangleShape = new PolygonShape();
+        rectangleShape.set(vertices, vertices.length);
+
+        // Create body
+        BodyDef rectangleBodyDef = new BodyDef();
+        rectangleBodyDef.type = BodyType.STATIC;
+
+        body = world.createBody(rectangleBodyDef);
+        // Create fixture
+        body.createFixture(rectangleShape, 1);
     }
 
     /**
@@ -42,7 +64,7 @@ public class Rect {
      *                      | Body      bodyToAddTo - the body in which to create the rect shape
      */
     Rect(World world, float x, float y, float hx, float hy, Object... vararg) {
-        createRectangle(world, new Vec2(x, y), hx, hy, vararg);
+        createRectangle(world, new Vec2(x, y), hx, hy, true, vararg);
     }
 
     /**
@@ -57,7 +79,7 @@ public class Rect {
      *                      | Body      bodyToAddTo - the body in which to create the rect shape
      */
     Rect(World world, Vec2 position, float hx, float hy, Object... vararg) {
-        createRectangle(world, position, hx, hy, vararg);
+        createRectangle(world, position, hx, hy, true, vararg);
     }
 
     /**
@@ -72,14 +94,14 @@ public class Rect {
      *                      | Body      bodyToAddTo - the body in which to create the rect shape
      */
     Rect(World world, float x, float y, Vec2 dimensions, Object... vararg) {
-        createRectangle(world, new Vec2(x, y), dimensions.x, dimensions.y, vararg);
+        createRectangle(world, new Vec2(x, y), dimensions.x, dimensions.y,true, vararg);
     }
 
 
     /**
      * The creation of the rectangle itself, called by the Rect wrapping methods above
      */
-    private void createRectangle(World world, Vec2 position, float hx, float hy, Object... vararg) {
+    private void createRectangle(World world, Vec2 position, float hx, float hy, boolean dynamic, Object... vararg) {
 
         // Get values of vararg
         AngleBodyTypeInterpreter angle_BodyType = new AngleBodyTypeInterpreter(vararg);
@@ -92,7 +114,8 @@ public class Rect {
         BodyDef rectangleBodyDef = new BodyDef();
         rectangleBodyDef.setPosition(position);
         rectangleBodyDef.setAngle(angle_BodyType.angle);
-        if (angle_BodyType.dynamic) {
+        //if(angle_BodyType.dynamic){
+        if (dynamic) {
             rectangleBodyDef.type = BodyType.DYNAMIC;
         }
         else {
