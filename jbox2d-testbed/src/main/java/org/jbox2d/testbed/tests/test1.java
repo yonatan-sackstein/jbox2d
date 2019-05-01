@@ -10,6 +10,7 @@ import org.jbox2d.dynamics.Fixture;
 import org.jbox2d.dynamics.joints.RevoluteJointDef;
 import org.jbox2d.pooling.arrays.Vec2Array;
 import org.jbox2d.testbed.framework.TestbedTest;
+import org.jbox2d.testbed.json.CartDefinition;
 
 public class test1 extends TestbedTest {
 

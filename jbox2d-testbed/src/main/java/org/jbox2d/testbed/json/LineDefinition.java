@@ -15,6 +15,6 @@ public class LineDefinition {
 
         Vec2 b = jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);
 
-        new StaticLine(world, false, a, b);
+        new StaticLine(world, false, 0, a, b);
     }
 }

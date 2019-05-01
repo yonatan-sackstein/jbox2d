@@ -12,7 +12,6 @@ public class BlockDefinition {
     public float Angle;
     public boolean IsStatic;
 
-
     public void Draw(World world, double proportionX, double proportionY)
     {
         Vec2 center = jsonReader.proportionate(jsonReader.toVec2(Center), proportionX, proportionY);
@@ -21,5 +20,4 @@ public class BlockDefinition {
 
         new Rect(world, center, dim, !IsStatic, Angle);
     }
-
 }

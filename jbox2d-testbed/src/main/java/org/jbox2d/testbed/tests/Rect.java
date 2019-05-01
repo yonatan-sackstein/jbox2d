@@ -114,16 +114,52 @@ public class Rect {
         BodyDef rectangleBodyDef = new BodyDef();
         rectangleBodyDef.setPosition(position);
         rectangleBodyDef.setAngle(angle_BodyType.angle);
-        //if(angle_BodyType.dynamic){
+
         if (dynamic) {
             rectangleBodyDef.type = BodyType.DYNAMIC;
         }
         else {
             rectangleBodyDef.type = BodyType.STATIC;
+            DrawStaticX(world, position, angle_BodyType.angle, hx, hy);
         }
 
         body = world.createBody(rectangleBodyDef);
         // Create fixture
         body.createFixture(rectangleShape, 1);
+    }
+
+    // Draw X in the center of static objects
+    public static void DrawStaticX(World world, Vec2 position, float angle, float hx, float hy) {
+        float X_width = (float)0.5 * hx;
+        float X_height = (float)0.5 * hy;
+
+        Vec2 a = new Vec2(position.x - X_width/2, position.y - X_height/2); // WS corner
+        Vec2 b = new Vec2(position.x + X_width/2, position.y + X_height/2); // NE corner
+
+        Vec2 a_rot = rotateVec(a, position, angle);
+        Vec2 b_rot = rotateVec(b, position, angle);
+
+        new StaticLine(world, false, angle, a_rot, b_rot);
+
+        a = new Vec2(position.x - X_width/2, position.y + X_height/2); // WN corner
+        b = new Vec2(position.x + X_width/2, position.y - X_height/2); // SE corner
+        a_rot = rotateVec(a, position, angle);
+        b_rot = rotateVec(b, position, angle);
+
+        new StaticLine(world, false, angle, a_rot, b_rot);
+    }
+
+    public static Vec2 rotateVec(Vec2 a, Vec2 axis, float angle)
+    {
+        // we have to recenter around (0,0) in order to rotate the vector
+        a = a.sub(axis);
+
+        float angleCos = (float)Math.cos(angle);
+        float angleSin = (float)Math.sin(angle);
+
+        Vec2 b = new Vec2( angleCos * a.x - angleSin * a.y,
+                           angleSin * a.x + angleCos * a.y);
+
+        return b.add(axis);
     }
 }

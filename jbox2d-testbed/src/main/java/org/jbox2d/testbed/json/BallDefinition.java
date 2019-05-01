@@ -10,14 +10,11 @@ public class BallDefinition {
     public float Radius;
     public Boolean IsStatic;
 
-    // TODO: Make definitionDraw class
     public void Draw(World world, double proportionX, double proportionY)
     {
-        //TODO: draw static X
         Vec2 center = jsonReader.proportionate(jsonReader.toVec2(Center),proportionX, proportionY);
 
         new Ball(world, center, (float)(Radius/Math.pow(Math.pow(proportionX,2)+Math.pow(proportionX,2),0.5)), !IsStatic);
     }
-
 
 }

@@ -21,9 +21,9 @@ public class cartTest extends TestbedTest {
         new Rect(world, -30, -2, 1, 1, 0.1f, false);
 
         // Creating static triangle
-        new StaticLine(world, true, new Vec2(-20,5),
-                                                   new Vec2(-5,5),
-                                                   new Vec2(-20, 15));
+        new StaticLine(world, true, 0, new Vec2(-20,5),
+                                                        new Vec2(-5,5),
+                                                        new Vec2(-20, 15));
         // Creating carts
         Vec2 cartDim = new Vec2(2, 0.5f);
         Cart cart1 = new Cart(world, -10, 0, cartDim, 0);

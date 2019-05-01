@@ -1,25 +1,25 @@
 {
-  "ImageFilePath": "Synthetic_83.jpg",
+  "ImageFilePath": "Synthetic_109.jpg",
   "Carts": [
     {
       "BodyCenter": "225, -150",
-      "BodyWidth": 78,
-      "BodyHeight": 58,
-      "Angle": 1.26536369
+      "BodyWidth": 127,
+      "BodyHeight": 38,
+      "Angle": -0.436332315
     }
   ],
   "Balls": [
     {
       "Center": "225, -450",
-      "Radius": 78.749992370605469,
+      "Radius": 127.5,
       "IsStatic": false
     }
   ],
   "Walls": [
     {
-      "A": "573, -570",
-      "B": "676, -554",
-      "Width": 24.273090845807889
+      "A": "720, -570",
+      "B": "621, -433",
+      "Width": 31.697801930192956
     }
   ],
   "Blocks": [],
@@ -27,7 +27,7 @@
   "Springs": [
     {
       "A": "675, -150",
-      "B": "724, -166"
+      "B": "648, -69"
     }
   ],
   "Triangles": []

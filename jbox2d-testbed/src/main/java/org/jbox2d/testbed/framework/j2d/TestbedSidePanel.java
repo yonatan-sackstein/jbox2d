@@ -219,6 +219,7 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
       @Override
       public void actionPerformed(ActionEvent e) {
         controller.reset();
+        pauseButton.setText("Resume");
       }
     });
 
