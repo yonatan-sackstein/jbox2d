@@ -14,7 +14,7 @@ public class BallDefinition {
     {
         Vec2 center = jsonReader.proportionate(jsonReader.toVec2(Center),proportionX, proportionY);
 
-        new Ball(world, center, (float)(Radius/Math.pow(Math.pow(proportionX,2)+Math.pow(proportionX,2),0.5)), !IsStatic);
+        new Ball(world, center, (float)(Radius/Math.pow(Math.pow(proportionX,2)+Math.pow(proportionY,2),0.5)), !IsStatic);
     }
 
 }
