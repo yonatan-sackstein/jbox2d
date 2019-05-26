@@ -18,109 +18,36 @@ public class Rect {
     /**
      * Creates a rectangular shape in the given body or as new STATIC body.
      *
-     * @param world         The world in which the rectangle is created
-     * @param position      Center position
-     * @param dimensions    Half of the height and width of the rectangle
-     * @param dynamic       Optional - Ball is STATIC or DYNAMIC
-     * @param vararg        Can be one or both, but no more than one from each of the following:
-     *                      | float     angle   - the angle of the rectangle (radians)
-     *                      | Body      bodyToAddTo - the body in which to create the rect shape
+     * @param world     The world in which the rectangle is created
+     * @param rectVert  Vec2[] of each of the rectangle vertices
+     * @param dynamic   boolean clarifying is the rectangle dynamic or not
      */
-    public Rect(World world, Vec2 position, Vec2 dimensions, boolean dynamic, Object... vararg) {
-        createRectangle(world, position, dimensions.x, dimensions.y, dynamic, vararg);
-    }
+    public Rect(World world, Vec2[] rectVert, boolean dynamic) {
 
-    /**
-     * Creates a rectangular shape in the given body or as new STATIC body.
-     *
-     * @param world         The world in which the rectangle is created
-     * @param vertices      The four vertices of the rectangle
-     */
-    public Rect(World world, Vec2[] vertices) {
+        float centerX = 0;
+        float centerY = 0;
+        for (int i=0; i< rectVert.length; i++) {
+            centerX += rectVert[i].x;
+            centerY += rectVert[i].y;
+        }
+        centerX = centerX / rectVert.length;
+        centerY = centerY / rectVert.length;
 
         // Create shape
         PolygonShape rectangleShape = new PolygonShape();
-        rectangleShape.set(vertices, vertices.length);
+        rectangleShape.set(rectVert, 4);
 
         // Create body
         BodyDef rectangleBodyDef = new BodyDef();
-        rectangleBodyDef.type = BodyType.STATIC;
-
-        body = world.createBody(rectangleBodyDef);
-        // Create fixture
-        body.createFixture(rectangleShape, 1);
-    }
-
-    /**
-     * Creates a rectangular shape in the given body or as new STATIC body.
-     *
-     * @param world         The world in which the rectangle is created
-     * @param x             x position
-     * @param y             y position
-     * @param hx            Half of the width of the rectangle
-     * @param hy            Half of the height of the rectangle
-     * @param vararg        Can be one or both, but no more than one from each of the following:
-     *                      | float     angle   - the angle of the rectangle (radians)
-     *                      | Body      bodyToAddTo - the body in which to create the rect shape
-     */
-    Rect(World world, float x, float y, float hx, float hy, Object... vararg) {
-        createRectangle(world, new Vec2(x, y), hx, hy, true, vararg);
-    }
-
-    /**
-     * Creates a rectangular shape in the given body or as new STATIC body.
-     *
-     * @param world         The world in which the rectangle is created
-     * @param position      Center position
-     * @param hx            Half of the width of the rectangle
-     * @param hy            Half of the height of the rectangle
-     * @param vararg        Can be one or both, but no more than one from each of the following:
-     *                      | float     angle   - the angle of the rectangle (radians)
-     *                      | Body      bodyToAddTo - the body in which to create the rect shape
-     */
-    Rect(World world, Vec2 position, float hx, float hy, Object... vararg) {
-        createRectangle(world, position, hx, hy, true, vararg);
-    }
-
-    /**
-     * Creates a rectangular shape in the given body or as new STATIC body.
-     *
-     * @param world         The world in which the rectangle is created
-     * @param x             x position
-     * @param y             y position
-     * @param dimensions    Half of the height and width of the rectangle
-     * @param vararg        Can be one or both, but no more than one from each of the following:
-     *                      | float     angle   - the angle of the rectangle (radians)
-     *                      | Body      bodyToAddTo - the body in which to create the rect shape
-     */
-    Rect(World world, float x, float y, Vec2 dimensions, Object... vararg) {
-        createRectangle(world, new Vec2(x, y), dimensions.x, dimensions.y,true, vararg);
-    }
-
-
-    /**
-     * The creation of the rectangle itself, called by the Rect wrapping methods above
-     */
-    private void createRectangle(World world, Vec2 position, float hx, float hy, boolean dynamic, Object... vararg) {
-
-        // Get values of vararg
-        AngleBodyTypeInterpreter angle_BodyType = new AngleBodyTypeInterpreter(vararg);
-
-        // Create shape
-        PolygonShape rectangleShape = new PolygonShape();
-        rectangleShape.setAsBox(hx, hy);
-
-        // Create body
-        BodyDef rectangleBodyDef = new BodyDef();
-        rectangleBodyDef.setPosition(position);
-        rectangleBodyDef.setAngle(angle_BodyType.angle);
+//        rectangleBodyDef.position.set(centerX, centerY);
 
         if (dynamic) {
             rectangleBodyDef.type = BodyType.DYNAMIC;
         }
         else {
             rectangleBodyDef.type = BodyType.STATIC;
-            DrawStaticX(world, position, angle_BodyType.angle, hx, hy);
+            // TODO: The angle, hx and hy are set to random numbers
+            DrawStaticX(world, new Vec2(centerX, centerY), 0, 10, 10);
         }
 
         body = world.createBody(rectangleBodyDef);
@@ -129,7 +56,7 @@ public class Rect {
     }
 
     // Draw X in the center of static objects
-    public static void DrawStaticX(World world, Vec2 position, float angle, float hx, float hy) {
+    private static void DrawStaticX(World world, Vec2 position, float angle, float hx, float hy) {
         float X_width = (float)0.5 * hx;
         float X_height = (float)0.5 * hy;
 
@@ -149,7 +76,7 @@ public class Rect {
         new StaticLine(world, false, angle, a_rot, b_rot);
     }
 
-    public static Vec2 rotateVec(Vec2 a, Vec2 axis, float angle)
+    private static Vec2 rotateVec(Vec2 a, Vec2 axis, float angle)
     {
         // we have to recenter around (0,0) in order to rotate the vector
         a = a.sub(axis);

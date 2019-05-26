@@ -26,83 +26,31 @@ public class Cart {
     private float wheelMargin;
 
     // TODO: Reduce to one constructor (only the public one is needed)
-
     /**
      * Creates a cart body (main rectangle and two circles for wheels)
      * The relations that define the wheels position and scale are defined using the static Cart class variables:
      * wheelRadiusScale and wheelsRelativePos.
      *
-     * @param world     The world in which the cart is created
-     * @param position  Position of the main rectangle body
-     * @param dimension Half width and half height of the main rectangle body
-     * @param angle     Optional - The angle of the cart (radians)
+     * @param world         The world in which the cart is created
+     * @param rectVert      Vec2[] of each of the cart body vertices
+     * @param wheelCenters  Vec2[] of each of the cart wheels centers
+     * @param wheelRadius   The radius of both wheels (only one because they are same)
      */
-    public Cart(World world, Vec2 position, Vec2 dimension, float... angle) {
-        createCart(world, position, dimension, angle);
-    }
-
-    /**
-     * Creates a cart body (main rectangle and two circles for wheels)
-     * The relations that define the wheels position and scale are defined using the static Cart class variables:
-     * wheelRadiusScale and wheelsRelativePos.
-     *
-     * @param world     The world in which the cart is created
-     * @param x         X position of the main rectangle body
-     * @param y         Y position of the main rectangle body
-     * @param hx        Half width of the main rectangle body
-     * @param hy        Half height of the main rectangle body
-     * @param angle     Optional - The angle of the cart (radians)
-     */
-    Cart(World world, float x, float y, float hx, float hy, float... angle) {
-        createCart(world, new Vec2(x, y), new Vec2(hx, hy), angle);
-    }
-
-    /**
-     * Creates a cart body (main rectangle and two circles for wheels)
-     * The relations that define the wheels position and scale are defined using the static Cart class variables:
-     * wheelRadiusScale and wheelsRelativePos.
-     *
-     * @param world     The world in which the cart is created
-     * @param position  Position of the main rectangle body
-     * @param hx        Half width of the main rectangle body
-     * @param hy        Half height of the main rectangle body
-     * @param angle     Optional - The angle of the cart (radians)
-     */
-    Cart(World world, Vec2 position, float hx, float hy, float... angle) {
-        createCart(world, position, new Vec2(hx, hy), angle);
-    }
-
-    /**
-     * Creates a cart body (main rectangle and two circles for wheels)
-     * The relations that define the wheels position and scale are defined using the static Cart class variables:
-     * wheelRadiusScale and wheelsRelativePos.
-     *
-     * @param world     The world in which the cart is created
-     * @param x         X position of the main rectangle body
-     * @param y         Y position of the main rectangle body
-     * @param dimension Half width and half height of the main rectangle body
-     * @param angle     Optional - The angle of the cart (radians)
-     */
-    Cart(World world, float x, float y, Vec2 dimension, float... angle) {
-        createCart(world, new Vec2(x, y), dimension, angle);
-    }
-
-    void createCart(World world, Vec2 cartPos, Vec2 cartDim, float... inputAngle) {
-
-        // Take zero angle as default if no value given
-        float angle = (inputAngle.length > 0) ? inputAngle[0] : 0;
+    public Cart(World world, Vec2[] rectVert, Vec2[] wheelCenters, float wheelRadius) {
 
         // Increment group index to differ between each cart created.
         // (all bodies created with same group index will not collide,
         // here those are the rectangle and two wheels)
         cartGroupIndex += 1;
 
-        // Define wheels dimensions according to static Cart class variables
-        wheelRadius = wheelRadiusScale * cartDim.x;
-        wheelMargin = wheelRadiusScale * cartDim.x / 2;
-
-        // Save the dimensions of the cart to be used in getOuterHalfDimensions()
-        bodyDimensions = cartDim;
+        float cartCenterX = 0;
+        float cartCenterY = 0;
+        for (int i=0; i< rectVert.length; i++) {
+            cartCenterX += rectVert[i].x;
+            cartCenterY += rectVert[i].y;
+        }
+        cartCenterX = cartCenterX / rectVert.length;
+        cartCenterY = cartCenterY / rectVert.length;
 
         // ------------------------------------------------------------------------
         //      Creating cart body (main body and two wheelHolders, no wheels)
@@ -110,14 +58,13 @@ public class Cart {
 
         // Creating main cart body body
         BodyDef cartBodyDef = new BodyDef();
-        cartBodyDef.position.set(cartPos.x, cartPos.y);
+//        cartBodyDef.position.set(cartCenterX, cartCenterY);
         cartBodyDef.type = BodyType.DYNAMIC;
-        cartBodyDef.setAngle(angle);
         body = world.createBody(cartBodyDef);
 
         // Creating main cart body shape
         PolygonShape cartBodyBox = new PolygonShape();
-        cartBodyBox.setAsBox(cartDim.x, cartDim.y);
+        cartBodyBox.set(rectVert, 4);
 
         // Creating main cart body fixture
         FixtureDef cartBodyFixtureDef = new FixtureDef();
@@ -136,13 +83,9 @@ public class Cart {
 
         // ---------- Left wheel ----------
 
-        // Position parameters
-        Vec2 leftWheelHoldShift = new Vec2(-wheelsRelativePos * cartDim.x, -cartDim.y-wheelMargin);
-        Vec2 leftWheelCenter = body.getWorldPoint(leftWheelHoldShift);
-
         // Creating body
         BodyDef leftWheelBodyDef = new BodyDef();
-        leftWheelBodyDef.position.set(leftWheelCenter);
+        leftWheelBodyDef.position.set(wheelCenters[1]);
         leftWheelBodyDef.type = BodyType.DYNAMIC;
         Body leftWheel = world.createBody(leftWheelBodyDef);
 
@@ -155,18 +98,14 @@ public class Cart {
 
         // Connecting left wheel to cart
         RevoluteJointDef leftWheelJointDef = new RevoluteJointDef();
-        leftWheelJointDef.initialize(body, leftWheel, leftWheelCenter);
+        leftWheelJointDef.initialize(body, leftWheel, wheelCenters[1]);
         world.createJoint(leftWheelJointDef);
 
         // ---------- Right wheel ----------
 
-        // Position parameters
-        Vec2 rightWheelHoldShift = new Vec2(wheelsRelativePos * cartDim.x, -cartDim.y-wheelMargin);
-        Vec2 rightwheelCenter = body.getWorldPoint(rightWheelHoldShift);
-
         // Creating body
         BodyDef rightWheelBodyDef = new BodyDef();
-        rightWheelBodyDef.position.set(rightwheelCenter);
+        rightWheelBodyDef.position.set(wheelCenters[2]);
         rightWheelBodyDef.type = BodyType.DYNAMIC;
         Body rightWheel = world.createBody(rightWheelBodyDef);
 
@@ -179,16 +118,7 @@ public class Cart {
 
         // Connecting right wheel to cart
         RevoluteJointDef rightWheelJointDef = new RevoluteJointDef();
-        rightWheelJointDef.initialize(body, rightWheel, rightwheelCenter);
+        rightWheelJointDef.initialize(body, rightWheel, wheelCenters[2]);
         world.createJoint(rightWheelJointDef);
-    }
-
-    /**
-     * Gets the half width and half height of the whole cart (including wheels)
-     *
-     * @return Half width and half height
-     */
-    public Vec2 getOuterHalfDimensions() {
-        return bodyDimensions.addLocal(0, wheelRadius + wheelMargin);
     }
 }

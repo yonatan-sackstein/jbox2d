@@ -9,23 +9,15 @@ public class TriangleDefinition {
     public String A;
     public String B;
     public String C;
-    public float Angle;
-
-    public TriangleDefinition(String s, String s1, String s2, float i) {
-        A = s;
-        B = s1;
-        C = s2;
-        Angle = i;
-    }
+    public boolean IsStatic;
 
     public void Draw(World world, double proportionX, double proportionY)
     {
-        Vec2 a =  jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);;
-        Vec2 b =  jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);;
-        Vec2 c =  jsonReader.proportionate(jsonReader.toVec2(C), proportionX, proportionY);;
-        Boolean isStatic = true;// TODO: is necessary ?
+        Vec2 a =  jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);
+        Vec2 b =  jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);
+        Vec2 c =  jsonReader.proportionate(jsonReader.toVec2(C), proportionX, proportionY);
 
-        new Poly(world, isStatic, Angle, a, b, c);
+        new Poly(world, !IsStatic, a, b, c);
     }
 
 }

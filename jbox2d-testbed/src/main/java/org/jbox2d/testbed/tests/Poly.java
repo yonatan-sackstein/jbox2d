@@ -19,11 +19,10 @@ public class Poly {
      *
      * @param world     The world in which the ball is created
      * @param dynamic    If true, the body will be DYNAMIC, else it will be STATIC
-     * @param angle     Angle of the poly (radians)
      * @param vertices  All the points of the line. Can be provided as an Vec2 array or as
      *                  multiple individual Vec2 arguments
      */
-    public Poly(World world, boolean dynamic, float angle, Vec2... vertices) {
+    public Poly(World world, boolean dynamic, Vec2... vertices) {
 
         // Creating body
         BodyDef polyBodyDef = new BodyDef();
@@ -35,7 +34,6 @@ public class Poly {
         }
         Vec2 origin = vertices[0];
         polyBodyDef.setPosition(origin);
-        polyBodyDef.setAngle(angle);
 
         body = world.createBody(polyBodyDef);
 

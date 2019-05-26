@@ -24,10 +24,21 @@ public class cartTest extends TestbedTest {
         new StaticLine(world, true, 0, new Vec2(-20,5),
                                                         new Vec2(-5,5),
                                                         new Vec2(-20, 15));
+
+        Vec2[] wheelCenters = new Vec2[2];
+        wheelCenters[0] = new Vec2(10, 5);
+        wheelCenters[1] = new Vec2(15, 5);;
+
+        Vec2[] vertices = new Vec2[4];
+        vertices[0] = new Vec2(5, 7.5f);
+        vertices[1] = new Vec2(20, 7.5f);
+        vertices[2] = new Vec2(20, 15);
+        vertices[3] = new Vec2(5, 15);
+
         // Creating carts
         Vec2 cartDim = new Vec2(2, 0.5f);
-        Cart cart1 = new Cart(world, -10, 0, cartDim, 0);
-        Cart cart2 = new Cart(world, -18, 20, cartDim);
+        Cart cart1 = new Cart(world, vertices, wheelCenters, 2.5f);
+//        Cart cart2 = new Cart(world, -18, 20, cartDim);
 
         // Connecting cart to wall
         Spring.springFrequency = 0.3f;
