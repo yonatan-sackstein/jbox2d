@@ -4,7 +4,6 @@ import com.mathworks.engine.MatlabEngine;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.World;
 import org.jbox2d.testbed.framework.TestbedTest;
-import org.jbox2d.testbed.json.CartDefinition;
 import org.jbox2d.testbed.json.Composition;
 import org.jbox2d.testbed.json.jsonReader;
 
@@ -22,7 +21,7 @@ public class mainTest extends TestbedTest {
     public static int BOARD_WIDTH = 50;
     public static int BOARD_HEIGHT;
 
-    private static void Run() {
+    private static void RunMatlab() {
         try {
             MatlabEngine eng = MatlabEngine.startMatlab();
 
@@ -47,33 +46,39 @@ public class mainTest extends TestbedTest {
         }
     }
 
+    void RunJBox()
+    {
+        String fileName = "Real_301";
+        World world = getWorld();
+        //Composition comp = jsonReader.fromJSON("Synthetic Images\\" + fileName + ".json");
+        Composition comp = jsonReader.fromJSON("Synthetic Images\\" + "output_example.json");
+
+        int height = 1;
+        int width = 1;
+        try {
+            String path = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Synthetic Images\\" + fileName + ".jpg";
+            File f = new File(path);
+            BufferedImage image = ImageIO.read(f);
+            height = image.getHeight();
+            width = image.getWidth();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+
+        // Normalise scale - to order of BOARD
+        BOARD_HEIGHT = BOARD_WIDTH * height / width;
+        double proportionX = (double) width / BOARD_WIDTH;
+        double proportionY = (double) height / BOARD_HEIGHT;
+
+        jsonReader.CompositionDecoder(comp, world, proportionX, proportionY);
+    }
+
     @Override
     public void initTest() {
 
-        Run();
+//        RunMatlab();
 
-//        String fileName = "Synthetic_1";
-//        World world = getWorld();
-//        Composition comp = jsonReader.fromJSON("Synthetic Images\\" + fileName + ".json");
-//
-//        int height = 1;
-//        int width = 1;
-//        try {
-//            String path = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Synthetic Images\\" + fileName + ".jpg";
-//            File f = new File(path);
-//            BufferedImage image = ImageIO.read(f);
-//            height = image.getHeight();
-//            width = image.getWidth();
-//        } catch (IOException ioe) {
-//            ioe.printStackTrace();
-//        }
-//
-//        // Normalise scale - to order of BOARD
-//        BOARD_HEIGHT = BOARD_WIDTH * height / width;
-//        double proportionX = (double) width / BOARD_WIDTH;
-//        double proportionY = (double) height / BOARD_HEIGHT;
-//
-//        jsonReader.CompositionDecoder(comp, world, proportionX, proportionY);
+        RunJBox();
 
         // Draw Image Frame
 //        new Rect(world,

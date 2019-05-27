@@ -12,7 +12,7 @@ import org.jbox2d.dynamics.*;
  * Class that creates a STATIC or DYNAMIC polygon from given vertices
  */
 public class Poly {
-    Body body;
+    public Body body;
 
     /**
      * Creates a polygon body with specified vertices

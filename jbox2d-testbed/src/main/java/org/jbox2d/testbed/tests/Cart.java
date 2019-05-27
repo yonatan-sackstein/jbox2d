@@ -85,7 +85,7 @@ public class Cart {
 
         // Creating body
         BodyDef leftWheelBodyDef = new BodyDef();
-        leftWheelBodyDef.position.set(wheelCenters[1]);
+        leftWheelBodyDef.position.set(wheelCenters[0]);
         leftWheelBodyDef.type = BodyType.DYNAMIC;
         Body leftWheel = world.createBody(leftWheelBodyDef);
 
@@ -98,14 +98,14 @@ public class Cart {
 
         // Connecting left wheel to cart
         RevoluteJointDef leftWheelJointDef = new RevoluteJointDef();
-        leftWheelJointDef.initialize(body, leftWheel, wheelCenters[1]);
+        leftWheelJointDef.initialize(body, leftWheel, wheelCenters[0]);
         world.createJoint(leftWheelJointDef);
 
         // ---------- Right wheel ----------
 
         // Creating body
         BodyDef rightWheelBodyDef = new BodyDef();
-        rightWheelBodyDef.position.set(wheelCenters[2]);
+        rightWheelBodyDef.position.set(wheelCenters[1]);
         rightWheelBodyDef.type = BodyType.DYNAMIC;
         Body rightWheel = world.createBody(rightWheelBodyDef);
 
@@ -118,7 +118,7 @@ public class Cart {
 
         // Connecting right wheel to cart
         RevoluteJointDef rightWheelJointDef = new RevoluteJointDef();
-        rightWheelJointDef.initialize(body, rightWheel, wheelCenters[2]);
+        rightWheelJointDef.initialize(body, rightWheel, wheelCenters[1]);
         world.createJoint(rightWheelJointDef);
     }
 }

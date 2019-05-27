@@ -16,6 +16,7 @@ public class CartDefinition {
 
     public void Draw(World world, double proportionX, double proportionY)
     {
+        // TODO: another proportionate function with string as vector parameter
         Vec2 vert1 = jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);
         Vec2 vert2 = jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);
         Vec2 vert3 = jsonReader.proportionate(jsonReader.toVec2(C), proportionX, proportionY);
@@ -24,7 +25,7 @@ public class CartDefinition {
         Vec2 wheelCenter1 = jsonReader.proportionate(jsonReader.toVec2(wheel1), proportionX, proportionY);
         Vec2 wheelCenter2 = jsonReader.proportionate(jsonReader.toVec2(wheel2), proportionX, proportionY);
 
-        // TODO: Figure out how the proportionate function shoud affect the wheels radius
+        // TODO: Figure out how the proportionate function should affect the wheels radius
 
         float wheelsRadius = (float)(radius/Math.pow(Math.pow(proportionX,2) + Math.pow(proportionY,2),0.5));
 

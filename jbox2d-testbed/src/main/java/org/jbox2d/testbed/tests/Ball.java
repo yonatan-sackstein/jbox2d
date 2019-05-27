@@ -52,7 +52,8 @@ public class Ball {
         }
         else {
             ballBodyDef.type = BodyType.STATIC;
-            Rect.DrawStaticX(world, position, 0, radius, radius);
+            //TODO
+            //Rect.DrawStaticX(world, position, 0, radius, radius);
         }
         body = world.createBody(ballBodyDef);
 
