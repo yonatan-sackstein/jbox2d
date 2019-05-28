@@ -25,19 +25,9 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
-import javax.swing.ListCellRenderer;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -75,7 +65,7 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
   public JButton saveButton = new JButton("Save");
   public JButton loadButton = new JButton("Load");
 
-  public TestbedSidePanel(TestbedModel argModel, AbstractTestbedController argController) {
+    public TestbedSidePanel(TestbedModel argModel, AbstractTestbedController argController) {
     model = argModel;
     controller = argController;
     initComponents();
@@ -108,6 +98,8 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
     tests.setRenderer(new ListCellRenderer() {
       JLabel categoryLabel = null;
       JLabel testLabel = null;
+
+
 
       @Override
       public Component getListCellRendererComponent(JList list, Object ovalue, int index,
@@ -295,4 +287,5 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
   public void actionPerformed(ActionEvent e) {
     controller.playTest(tests.getSelectedIndex());
   }
+
 }

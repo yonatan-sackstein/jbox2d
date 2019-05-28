@@ -20,11 +20,9 @@ package org.jbox2d.testbed.framework.j2d;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.io.File;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 import org.jbox2d.testbed.framework.*;
 import org.jbox2d.testbed.framework.AbstractTestbedController.MouseBehavior;
@@ -37,6 +35,8 @@ import org.jbox2d.testbed.framework.AbstractTestbedController.UpdateBehavior;
  */
 public class TestbedMain {
   // private static final Logger log = LoggerFactory.getLogger(TestbedMain.class);
+
+  public static JFileChooser chooser = new JFileChooser();
 
   public static void main(String[] args) {
     // try {
@@ -57,12 +57,21 @@ public class TestbedMain {
     testbed.setTitle("JBox2D Testbed");
     testbed.setLayout(new BorderLayout());
     TestbedSidePanel side = new TestbedSidePanel(model, controller);
-    testbed.add((Component) panel, "Center");
+
+    panel.add(chooser);
+    String cd = System.getProperty("user.dir");
+    File defaultDir = new File(cd + "\\Images");
+    chooser.setCurrentDirectory(defaultDir);
+    chooser.showOpenDialog(null);
+
+    testbed.add(panel, "Center");
+
     testbed.add(new JScrollPane(side), "East");
     testbed.pack();
     testbed.setVisible(true);
     testbed.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     System.out.println(System.getProperty("java.home"));
+
 
     SwingUtilities.invokeLater(new Runnable() {
       @Override
@@ -71,5 +80,9 @@ public class TestbedMain {
         controller.start();
       }
     });
+  }
+
+  public static String getImagePath(){
+    return chooser.getSelectedFile().getPath();
   }
 }
