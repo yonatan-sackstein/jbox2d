@@ -38,7 +38,7 @@ public class mainTest extends TestbedTest {
             eng.eval("cd '" + matlabFunDir + "'");
 
             double th = 0.95;
-            Object result = eng.feval(1, "Detect_Map", imagePath, th);
+            Object result = eng.feval(1, "Detect_Map", imagePath, th, true, true);
 
             jsonPath = (String) result;
 

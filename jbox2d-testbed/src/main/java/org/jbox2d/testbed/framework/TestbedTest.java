@@ -325,7 +325,7 @@ public abstract class TestbedTest
   private final Color3f color3 = new Color3f(.9f, .9f, .9f);
   private final Color3f color4 = new Color3f(.6f, .61f, 1);
   private final Color3f color5 = new Color3f(.9f, .9f, .3f);
-  private final Color3f mouseColor = new Color3f(0f, 1f, 0f);
+  private final Color3f mouseColor = new Color3f(1f, 1f, 0f);
   private final Vec2 p1 = new Vec2();
   private final Vec2 p2 = new Vec2();
   private final Vec2 tangent = new Vec2();
