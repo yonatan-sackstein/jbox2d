@@ -10,10 +10,10 @@ public class SpringDefinition {
     public String A;
     public String B;
 
-    public void Draw(World world, double proportionX, double proportionY)
+    public void Draw(World world, float scale)
     {
-        Vec2 a =  jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);
-        Vec2 b =  jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);;
+        Vec2 a =  jsonReader.toVec2(A).mul(scale);
+        Vec2 b =  jsonReader.toVec2(B).mul(scale);
 
         Spring.springFrequency = 0.3f;
 

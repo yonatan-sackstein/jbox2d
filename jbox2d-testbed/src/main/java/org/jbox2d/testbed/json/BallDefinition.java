@@ -10,11 +10,13 @@ public class BallDefinition {
     public float Radius;
     public Boolean IsStatic;
 
-    public void Draw(World world, double proportionX, double proportionY)
+    public void Draw(World world, float scale)
     {
-        Vec2 center = jsonReader.proportionate(jsonReader.toVec2(Center),proportionX, proportionY);
+        Vec2 center = jsonReader.toVec2(Center).mul(scale);
 
-        new Ball(world, center, (float)(Radius/Math.pow(Math.pow(proportionX,2)+Math.pow(proportionY,2),0.5)), !IsStatic);
+        Radius = Radius * scale;
+
+        new Ball(world, center, Radius, !IsStatic);
     }
 
 }

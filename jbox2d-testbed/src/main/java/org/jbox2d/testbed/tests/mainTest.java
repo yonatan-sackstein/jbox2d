@@ -24,8 +24,8 @@ import java.util.concurrent.ExecutionException;
 
 public class mainTest extends TestbedTest {
 
-    public static int BOARD_WIDTH = 50;
-    public static int BOARD_HEIGHT;
+    private static float BOARD_WIDTH = 50;
+    private static float BOARD_HEIGHT;
 
     private static String RunMatlab(String imagePath) {
         String jsonPath = "";
@@ -69,11 +69,10 @@ public class mainTest extends TestbedTest {
 
         // Normalise scale - to order of BOARD
         BOARD_HEIGHT = BOARD_WIDTH * height / width;
-        double proportionX = (double) width / BOARD_WIDTH;
-        double proportionY = (double) height / BOARD_HEIGHT;
+        float scaleFactor = BOARD_WIDTH / width;
 
-        jsonReader.CompositionDecoder(comp, world, proportionX, proportionY);
-        getCamera().setCamera(new Vec2(BOARD_WIDTH / 2, -BOARD_HEIGHT / 2), 10);
+        jsonReader.CompositionDecoder(comp, world, scaleFactor);
+        getCamera().setCamera(new Vec2(BOARD_WIDTH/2, -BOARD_HEIGHT/2), 10);
     }
 
     @Override

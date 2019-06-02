@@ -31,48 +31,48 @@ public class jsonReader {
         return comp;
     }
 
-    public static void CompositionDecoder(Composition comp, World world, double proportionX, double proportionY)
+    public static void CompositionDecoder(Composition comp, World world, float scale)
     {
         for (CartDefinition def : comp.Carts){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
 
         for (BallDefinition def : comp.Balls){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
 
         for (WallDefinition def : comp.Walls){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
 
         for (BlockDefinition def : comp.Blocks){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
 
         for (LineDefinition def : comp.Lines){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
 
         for (SpringDefinition def : comp.Springs){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
 
         for (TriangleDefinition def : comp.Triangles){
-            def.Draw(world, proportionX, proportionY);
+            def.Draw(world, scale);
         }
     }
 
     public static Vec2 toVec2(String point)
     {
         String[] coordinates = point.split("\\,\\ ");
-        return new Vec2(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]));
+        return new Vec2(Integer.parseInt(coordinates[0]), -Integer.parseInt(coordinates[1]));
     }
 
     public static Vec2 proportionate(Vec2 vec, double proportionX, double proportionY)
     {
         Vec2 newVec = new Vec2();
-        newVec.x = (int)(vec.x/proportionX);
-        newVec.y = (int)(vec.y/proportionY);
+        newVec.x = (float)(vec.x/proportionX);
+        newVec.y = (float)(vec.y/proportionY);
         return newVec;
     }
 

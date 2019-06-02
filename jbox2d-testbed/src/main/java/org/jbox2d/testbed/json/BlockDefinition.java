@@ -13,12 +13,12 @@ public class BlockDefinition {
     public String D;
     public boolean IsStatic;
 
-    public void Draw(World world, double proportionX, double proportionY)
+    public void Draw(World world, float scale)
     {
-        Vec2 vert1 = jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);
-        Vec2 vert2 = jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);
-        Vec2 vert3 = jsonReader.proportionate(jsonReader.toVec2(C), proportionX, proportionY);
-        Vec2 vert4 = jsonReader.proportionate(jsonReader.toVec2(D), proportionX, proportionY);
+        Vec2 vert1 = jsonReader.toVec2(A).mul(scale);
+        Vec2 vert2 = jsonReader.toVec2(B).mul(scale);
+        Vec2 vert3 = jsonReader.toVec2(C).mul(scale);
+        Vec2 vert4 = jsonReader.toVec2(D).mul(scale);
 
         new Poly(world, !IsStatic, vert1, vert2, vert3, vert4);
     }

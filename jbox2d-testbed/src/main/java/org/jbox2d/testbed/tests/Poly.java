@@ -32,15 +32,26 @@ public class Poly {
         else {
             polyBodyDef.type = BodyType.STATIC;
         }
-        Vec2 origin = vertices[0];
-        polyBodyDef.setPosition(origin);
+
+        float originX = 0;
+        float originY = 0;
+        for (Vec2 vert : vertices) {
+            originX += vert.x;
+            originY += vert.y;
+        }
+        originX = originX / vertices.length;
+        originY = originY / vertices.length;
+
+        for (int i=0; i< vertices.length; i++) {
+            vertices[i] = vertices[i].sub(new Vec2(originX, originY));
+        }
+
+        polyBodyDef.setPosition(new Vec2(originX, originY));
 
         body = world.createBody(polyBodyDef);
 
         // Creating shape
         PolygonShape polyShape = new PolygonShape();
-        vertices[0] = new Vec2(0, 0);
-
         polyShape.set(vertices, vertices.length);
         // Creating fixture
         body.createFixture(polyShape, 1);

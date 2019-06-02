@@ -14,18 +14,10 @@ import org.jbox2d.dynamics.joints.RevoluteJointDef;
  */
 public class Cart {
 
-    public static float wheelRadiusScale = 0.25f; // The scale of the radius of the wheel in terms of cartDim[0]
-    public static float wheelsRelativePos = 0.67f; // The multiplier of the shift of the wheel holders from the cart
-    // body center in in terms of cartDim[0]
     private static int cartGroupIndex = -1; // bodies in the same group never collide
 
     Body body;
 
-    private Vec2 bodyDimensions;
-    private float wheelRadius;
-    private float wheelMargin;
-
-    // TODO: Reduce to one constructor (only the public one is needed)
     /**
      * Creates a cart body (main rectangle and two circles for wheels)
      * The relations that define the wheels position and scale are defined using the static Cart class variables:
@@ -45,12 +37,16 @@ public class Cart {
 
         float cartCenterX = 0;
         float cartCenterY = 0;
-        for (int i=0; i< rectVert.length; i++) {
-            cartCenterX += rectVert[i].x;
-            cartCenterY += rectVert[i].y;
+        for (Vec2 vert : rectVert) {
+            cartCenterX += vert.x;
+            cartCenterY += vert.y;
         }
         cartCenterX = cartCenterX / rectVert.length;
         cartCenterY = cartCenterY / rectVert.length;
+
+        for (int i=0; i< rectVert.length; i++) {
+            rectVert[i] = rectVert[i].sub(new Vec2(cartCenterX, cartCenterY));
+        }
 
         // ------------------------------------------------------------------------
         //      Creating cart body (main body and two wheelHolders, no wheels)
@@ -58,7 +54,7 @@ public class Cart {
 
         // Creating main cart body body
         BodyDef cartBodyDef = new BodyDef();
-//        cartBodyDef.position.set(cartCenterX, cartCenterY);
+        cartBodyDef.position.set(cartCenterX, cartCenterY);
         cartBodyDef.type = BodyType.DYNAMIC;
         body = world.createBody(cartBodyDef);
 

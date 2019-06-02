@@ -11,13 +11,14 @@ public class TriangleDefinition {
     public String C;
     public boolean IsStatic;
 
-    public void Draw(World world, double proportionX, double proportionY)
+    public void Draw(World world, float scale)
     {
-        Vec2 a =  jsonReader.proportionate(jsonReader.toVec2(A), proportionX, proportionY);
-        Vec2 b =  jsonReader.proportionate(jsonReader.toVec2(B), proportionX, proportionY);
-        Vec2 c =  jsonReader.proportionate(jsonReader.toVec2(C), proportionX, proportionY);
+        Vec2 a =  jsonReader.toVec2(A).mul(scale);
+        Vec2 b =  jsonReader.toVec2(B).mul(scale);
+        Vec2 c =  jsonReader.toVec2(C).mul(scale);
 
-        new Poly(world, !IsStatic, a, b, c);
+        // TODO: set dynamic to !IsStatic
+        new Poly(world, false, a, b, c);
     }
 
 }
