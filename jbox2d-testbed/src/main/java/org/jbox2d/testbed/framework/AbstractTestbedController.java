@@ -34,6 +34,11 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
 
+import javax.swing.*;
+
+import static org.jbox2d.testbed.framework.j2d.TestbedMain.getChooser;
+import static org.jbox2d.testbed.framework.j2d.TestbedMain.setNewJsonPath;
+
 /**
  * This class contains most control logic for the testbed and the update loop. It also watches the
  * model to switch tests and populates the model with some loop statistics.
@@ -412,8 +417,12 @@ public abstract class AbstractTestbedController {
 
   }
 
+  // Load a new image from the chooser dialog box
   private void _load() {
-
+    JFileChooser chooser = getChooser();
+    chooser.showOpenDialog(null);
+    setNewJsonPath();
+    reset();
   }
 }
 

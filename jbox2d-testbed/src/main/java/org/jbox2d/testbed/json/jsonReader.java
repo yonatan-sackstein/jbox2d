@@ -68,12 +68,4 @@ public class jsonReader {
         return new Vec2(Integer.parseInt(coordinates[0]), -Integer.parseInt(coordinates[1]));
     }
 
-    public static Vec2 proportionate(Vec2 vec, double proportionX, double proportionY)
-    {
-        Vec2 newVec = new Vec2();
-        newVec.x = (float)(vec.x/proportionX);
-        newVec.y = (float)(vec.y/proportionY);
-        return newVec;
-    }
-
 }

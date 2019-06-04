@@ -39,23 +39,4 @@ public class WallDefinition {
 //        new Rect(world, center, new Vec2(width/2, length/2), false, -(float)(Math.PI/2-angle));
     }
 
-    private float newWidth(float Width, double angle, double proportionX, double proportionY)
-    {
-        float x = (float)(Width*Math.sin(angle));
-        float y = (float)(Width*Math.cos(angle));
-
-        Vec2 newWidthVec = jsonReader.proportionate(new Vec2(x,y), proportionX, proportionY);
-
-        return newWidthVec.length();
-    }
-
-    private float newLength(float Length, double angle, double proportionX, double proportionY)
-    {
-        float x = (float)(Length*Math.cos(angle));
-        float y = (float)(Length*Math.sin(angle));
-
-        Vec2 newLengthVec = jsonReader.proportionate(new Vec2(x,y), proportionX, proportionY);
-
-        return newLengthVec.length();
-    }
 }

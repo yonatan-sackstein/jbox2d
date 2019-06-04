@@ -19,11 +19,12 @@
 package org.jbox2d.testbed.framework.j2d;
 
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.io.File;
+import java.util.concurrent.ExecutionException;
 
 import javax.swing.*;
 
+import com.mathworks.engine.MatlabEngine;
 import org.jbox2d.testbed.framework.*;
 import org.jbox2d.testbed.framework.AbstractTestbedController.MouseBehavior;
 import org.jbox2d.testbed.framework.AbstractTestbedController.UpdateBehavior;
@@ -37,14 +38,72 @@ public class TestbedMain {
   // private static final Logger log = LoggerFactory.getLogger(TestbedMain.class);
 
   public static JFileChooser chooser = new JFileChooser();
+  public static MatlabEngine eng;
+  public static Object detector;
+  public static String jsonPath;
 
-  public static void main(String[] args) {
+  private static void InitializeEngine() {
+      try{
+          System.out.println("Initializing Matlab Engine ...");
+          eng = MatlabEngine.startMatlab();
+          System.out.println("Initialization Completed");
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+      } catch (ExecutionException e) {
+          e.printStackTrace();
+      }
+  }
+
+  private static void InitializeDetector() {
+      // messages are printed from matlab
+     try {
+
+      // Change directory and evaluate function
+      String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";
+      eng.eval("cd '" + matlabFunDir + "'");
+      eng.feval(0, "intializeDetector");
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    } catch (ExecutionException e) {
+      e.printStackTrace();
+    }
+  }
+
+    private static String RunMatlab(String imagePath) {
+        // messages are printed from matlab
+        String jsonPath = "";
+
+        try {
+
+            // Change directory and evaluate function
+            String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";
+            eng.eval("cd '" + matlabFunDir + "'");
+
+            double th = 0.98;
+            Object result = eng.feval(1, "Detect_Map", imagePath, th, true, true);
+
+            jsonPath = (String) result;
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return jsonPath;
+    }
+
+    public static void main(String[] args) {
     // try {
     // UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
     // } catch (Exception e) {
     // log.warn("Could not set the look and feel to nimbus. "
     // + "Hopefully you're on a mac so the window isn't ugly as crap.");
     // }
+
+    InitializeEngine();
+    InitializeDetector();
+
     TestbedModel model = new TestbedModel();
     final AbstractTestbedController controller = new TestbedController(model,
         UpdateBehavior.UPDATE_CALLED, MouseBehavior.NORMAL);
@@ -66,12 +125,14 @@ public class TestbedMain {
 
     testbed.add(panel, "Center");
 
+    setNewJsonPath();
+//    jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
+
     testbed.add(new JScrollPane(side), "East");
     testbed.pack();
     testbed.setVisible(true);
     testbed.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     System.out.println(System.getProperty("java.home"));
-
 
     SwingUtilities.invokeLater(new Runnable() {
       @Override
@@ -82,7 +143,19 @@ public class TestbedMain {
     });
   }
 
-  public static String getImagePath(){
-    return chooser.getSelectedFile().getPath();
+  public static void setNewJsonPath(){
+        jsonPath = RunMatlab(getImagePath());
   }
+
+    public static String getImagePath(){
+        return chooser.getSelectedFile().getPath();
+    }
+
+    public static JFileChooser getChooser(){
+        return chooser;
+    }
+
+    public static String getJsonPath(){
+        return jsonPath;
+    }
 }

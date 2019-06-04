@@ -662,7 +662,7 @@ public abstract class TestbedTest
   }
 
   public boolean isSaveLoadEnabled() {
-    return false;
+    return true;
   }
 
   public void fixtureDestroyed(Fixture fixture) {}
