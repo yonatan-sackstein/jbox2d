@@ -18,15 +18,12 @@
  ******************************************************************************/
 package org.jbox2d.testbed.framework.j2d;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
+import javax.accessibility.AccessibleContext;
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import javax.swing.event.ChangeEvent;
@@ -75,7 +72,7 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
       @Override
       public void testChanged(TestbedTest argTest, int argIndex) {
         tests.setSelectedIndex(argIndex);
-        saveButton.setEnabled(argTest.isSaveLoadEnabled());
+//        saveButton.setEnabled(argTest.isSaveLoadEnabled());
         loadButton.setEnabled(argTest.isSaveLoadEnabled());
       }
     });
@@ -137,6 +134,8 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
     });
 
     top.add(new JLabel("Choose a test:"));
+    top.setFont(new Font("David", Font.PLAIN, 20));
+
     top.add(tests);
 
     addSettings(top, settings, SettingType.DRAWING);
@@ -153,33 +152,41 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
     add(middle, "Center");
 
     pauseButton.setAlignmentX(CENTER_ALIGNMENT);
+    pauseButton.setFont(new Font("David", Font.ITALIC, 30));
     stepButton.setAlignmentX(CENTER_ALIGNMENT);
+    stepButton.setFont(new Font("David", Font.ITALIC, 30));
     resetButton.setAlignmentX(CENTER_ALIGNMENT);
-    saveButton.setAlignmentX(CENTER_ALIGNMENT);
+    resetButton.setFont(new Font("David", Font.ITALIC, 30));
+    //saveButton.setAlignmentX(CENTER_ALIGNMENT);
     loadButton.setAlignmentX(CENTER_ALIGNMENT);
+    loadButton.setFont(new Font("David", Font.ITALIC, 40));
+    loadButton.setForeground(Color.BLUE);
     quitButton.setAlignmentX(CENTER_ALIGNMENT);
+    quitButton.setFont(new Font("David", Font.ITALIC, 30));
+    quitButton.setForeground(Color.RED);
 
-    Box buttonGroups = Box.createHorizontalBox();
+//    Box buttonGroups = Box.createHorizontalBox();
+    Box buttonGroups = Box.createVerticalBox();
     JPanel buttons1 = new JPanel();
     buttons1.setLayout(new GridLayout(0, 1));
-    buttons1.add(resetButton);
+    buttons1.add(loadButton);
 
     JPanel buttons2 = new JPanel();
-    buttons2.setLayout(new GridLayout(0, 1));
+    buttons2.setLayout(new GridLayout(1, 1));
     buttons2.add(pauseButton);
     buttons2.add(stepButton);
 
     JPanel buttons3 = new JPanel();
-    buttons3.setLayout(new GridLayout(0, 1));
-    buttons3.add(saveButton);
-    buttons3.add(loadButton);
+    buttons3.setLayout(new GridLayout(1, 1));
+    //buttons3.add(saveButton);
+    buttons3.add(resetButton);
     buttons3.add(quitButton);
 
     buttonGroups.add(buttons1);
     buttonGroups.add(buttons2);
     buttonGroups.add(buttons3);
 
-    add(buttonGroups, "South");
+    add(buttonGroups, "Center");
   }
 
   public void addListeners() {
@@ -188,9 +195,11 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
         if (model.getSettings().pause) {
           model.getSettings().pause = false;
           pauseButton.setText("Pause");
+          pauseButton.setForeground(Color.RED);
         } else {
           model.getSettings().pause = true;
           pauseButton.setText("Resume");
+          pauseButton.setForeground(Color.BLACK);
         }
         model.getPanel().grabFocus();
       }
@@ -239,7 +248,10 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
 
   private void addSettings(JPanel argPanel, TestbedSettings argSettings, SettingType argIgnore) {
     for (TestbedSetting setting : argSettings.getSettings()) {
-      if (setting.settingsType == argIgnore) {
+      //if (setting.settingsType == argIgnore) {
+
+      // Define SettingType.DRAWING for settings that are not on the panel
+      if (setting.settingsType == SettingType.DRAWING) {
         continue;
       }
       switch (setting.constraintType) {
@@ -252,6 +264,8 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
           slider.putClientProperty(SETTING_TAG, setting);
           slider.putClientProperty(LABEL_TAG, text);
           argPanel.add(text);
+          argPanel.setFont(new Font("David", Font.PLAIN, 20));
+
           argPanel.add(slider);
           break;
         case BOOLEAN:
@@ -259,6 +273,8 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
           checkbox.setSelected(setting.enabled);
           checkbox.addChangeListener(this);
           checkbox.putClientProperty(SETTING_TAG, setting);
+          checkbox.setFont(new Font("David", Font.PLAIN, 20));
+
           argPanel.add(checkbox);
           break;
       }

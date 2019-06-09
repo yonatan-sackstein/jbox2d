@@ -421,7 +421,13 @@ public abstract class AbstractTestbedController {
   private void _load() {
     JFileChooser chooser = getChooser();
     chooser.showOpenDialog(null);
-    setNewJsonPath();
+
+    TestbedSettings settings = model.getSettings();
+
+    boolean showDetection = settings.getSetting("Show Detection").enabled;
+    boolean showMapping = settings.getSetting("Show Mapping").enabled;
+
+    setNewJsonPath(showDetection, showMapping);
     reset();
   }
 }

@@ -59,7 +59,6 @@ public class mainTest extends TestbedTest {
         String imagePath = TestbedMain.getImagePath();
 
         String jsonPath = getJsonPath();
-//        String jasonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
 
         RunJBox(world, imagePath, jsonPath);
 

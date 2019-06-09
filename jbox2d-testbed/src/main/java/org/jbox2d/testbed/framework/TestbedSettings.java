@@ -60,6 +60,8 @@ public class TestbedSettings {
   public static final String DrawHelp = "Help";
   public static final String DrawTree = "Dynamic Tree";
   public static final String DrawWireframe = "Wireframe Mode";
+  public static final String ShowDetection = "Show Detection";
+  public static final String ShowMapping = "Show Mapping";
 
   public boolean pause = false;
   public boolean singleStep = false;
@@ -74,13 +76,19 @@ public class TestbedSettings {
   }
 
   private void populateDefaultSettings() {
+
+    // Define SettingType.DRAWING for settings that are not on the panel
+
     addSetting(new TestbedSetting(Hz, SettingType.ENGINE, 60, 1, 400));
-    addSetting(new TestbedSetting(PositionIterations, SettingType.ENGINE, 3, 0, 100));
-    addSetting(new TestbedSetting(VelocityIterations, SettingType.ENGINE, 8, 1, 100));
-    addSetting(new TestbedSetting(AllowSleep, SettingType.ENGINE, true));
-    addSetting(new TestbedSetting(WarmStarting, SettingType.ENGINE, true));
-    addSetting(new TestbedSetting(ContinuousCollision, SettingType.ENGINE, true));
-    addSetting(new TestbedSetting(SubStepping, SettingType.ENGINE, false));
+    addSetting(new TestbedSetting(PositionIterations, SettingType.DRAWING, 3, 0, 100));
+    addSetting(new TestbedSetting(VelocityIterations, SettingType.DRAWING, 8, 1, 100));
+    addSetting(new TestbedSetting(AllowSleep, SettingType.DRAWING, true));
+    addSetting(new TestbedSetting(WarmStarting, SettingType.DRAWING, true));
+    addSetting(new TestbedSetting(ContinuousCollision, SettingType.DRAWING, true));
+    addSetting(new TestbedSetting(SubStepping, SettingType.DRAWING, false));
+    addSetting(new TestbedSetting(ShowDetection, SettingType.ENGINE, false));
+    addSetting(new TestbedSetting(ShowMapping, SettingType.ENGINE, false));
+
     addSetting(new TestbedSetting(DrawShapes, SettingType.DRAWING, true));
     addSetting(new TestbedSetting(DrawJoints, SettingType.DRAWING, true));
     addSetting(new TestbedSetting(DrawAABBs, SettingType.DRAWING, false));
@@ -89,7 +97,7 @@ public class TestbedSettings {
     addSetting(new TestbedSetting(DrawContactImpulses, SettingType.DRAWING, false));
     addSetting(new TestbedSetting(DrawFrictionImpulses, SettingType.DRAWING, false));
     addSetting(new TestbedSetting(DrawCOMs, SettingType.DRAWING, false));
-    //addSetting(new TestbedSetting(DrawStats, SettingType.DRAWING, true));
+//    addSetting(new TestbedSetting(DrawStats, SettingType.DRAWING, true));
     addSetting(new TestbedSetting(DrawStats, SettingType.DRAWING, false));
     addSetting(new TestbedSetting(DrawHelp, SettingType.DRAWING, false));
     addSetting(new TestbedSetting(DrawTree, SettingType.DRAWING, false));
@@ -125,4 +133,5 @@ public class TestbedSettings {
   public TestbedSetting getSetting(String argName) {
     return settingsMap.get(argName);
   }
+
 }
