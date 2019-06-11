@@ -68,7 +68,7 @@ public class TestbedMain {
     }
   }
 
-    private static String RunMatlab(String imagePath, boolean showDetection, boolean showMapping) {
+    private static String RunMatlab(String imagePath, boolean showDetection, boolean showMapping, double th) {
         // messages are printed from matlab
         String jsonPath = "";
 
@@ -78,7 +78,6 @@ public class TestbedMain {
             String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";
             eng.eval("cd '" + matlabFunDir + "'");
 
-            double th = 0.98;
             Object result = eng.feval(1, "Detect_Map", imagePath, th, showDetection, showMapping);
 
             jsonPath = (String) result;
@@ -100,8 +99,8 @@ public class TestbedMain {
     // + "Hopefully you're on a mac so the window isn't ugly as crap.");
     // }
 
-    InitializeEngine();
-    InitializeDetector();
+//    InitializeEngine();
+//    InitializeDetector();
 
     TestbedModel model = new TestbedModel();
     final AbstractTestbedController controller = new TestbedController(model,
@@ -116,15 +115,15 @@ public class TestbedMain {
     testbed.setLayout(new BorderLayout());
     TestbedSidePanel side = new TestbedSidePanel(model, controller);
 
+    testbed.add(panel, "Center");
+
     panel.add(chooser);
     String cd = System.getProperty("user.dir");
     File defaultDir = new File(cd + "\\Images");
     chooser.setCurrentDirectory(defaultDir);
     chooser.showOpenDialog(null);
 
-    testbed.add(panel, "Center");
-
-    setNewJsonPath(false, false);
+    setNewJsonPath(false, false, 98);
     jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
 
     testbed.add(new JScrollPane(side), "East");
@@ -142,14 +141,14 @@ public class TestbedMain {
     });
   }
 
-    public static void setNewJsonPath(boolean showDetection, boolean showMapping){
-        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping);
-//        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
+    public static void setNewJsonPath(boolean showDetection, boolean showMapping, int threshold){
+//        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100);
+        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
   }
 
     public static String getImagePath(){
-        return chooser.getSelectedFile().getPath();
-//        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
+//        return chooser.getSelectedFile().getPath();
+        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
     }
 
     public static JFileChooser getChooser(){

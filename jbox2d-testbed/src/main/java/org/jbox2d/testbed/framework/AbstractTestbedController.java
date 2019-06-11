@@ -426,8 +426,9 @@ public abstract class AbstractTestbedController {
 
     boolean showDetection = settings.getSetting("Show Detection").enabled;
     boolean showMapping = settings.getSetting("Show Mapping").enabled;
+    int threshold = settings.getSetting("Detection Precision [%] ").value;
 
-    setNewJsonPath(showDetection, showMapping);
+    setNewJsonPath(showDetection, showMapping, threshold);
     reset();
   }
 }

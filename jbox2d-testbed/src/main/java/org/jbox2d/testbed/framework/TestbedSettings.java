@@ -42,6 +42,7 @@ import com.google.common.collect.Maps;
  */
 public class TestbedSettings {
   public static final String Hz = "Hz";
+  public static final String DetectionPrecision = "Detection Precision [%] ";
   public static final String PositionIterations = "Pos Iters";
   public static final String VelocityIterations = "Vel Iters";
   public static final String AllowSleep = "Sleep";
@@ -80,6 +81,7 @@ public class TestbedSettings {
     // Define SettingType.DRAWING for settings that are not on the panel
 
     addSetting(new TestbedSetting(Hz, SettingType.ENGINE, 60, 1, 400));
+    addSetting(new TestbedSetting(DetectionPrecision, SettingType.ENGINE, 98, 75, 100));
     addSetting(new TestbedSetting(PositionIterations, SettingType.DRAWING, 3, 0, 100));
     addSetting(new TestbedSetting(VelocityIterations, SettingType.DRAWING, 8, 1, 100));
     addSetting(new TestbedSetting(AllowSleep, SettingType.DRAWING, true));
