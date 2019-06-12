@@ -1,6 +1,7 @@
 package org.jbox2d.testbed.json;
 
 import org.jbox2d.common.Vec2;
+import org.jbox2d.dynamics.Body;
 import org.jbox2d.dynamics.World;
 import org.jbox2d.testbed.tests.Ball;
 import org.jbox2d.testbed.tests.Rect;
@@ -16,12 +17,13 @@ public class WallDefinition {
     public String B;
     public float Width;
 
-    public void Draw(World world, float scale)
+    public Body Draw(World world, float scale)
     {
         Vec2 a = jsonReader.toVec2(A).mul(scale);
         Vec2 b = jsonReader.toVec2(B).mul(scale);
 
-        new StaticLine(world, false, 0, a, b);
+        StaticLine line = new StaticLine(world, false, 0, a, b);
+        return line.body;
 
 //        float Length = b.sub(a).length();
 //        double angle = Math.acos(Vec2.dot(b.sub(a), new Vec2(1,0))/Length);

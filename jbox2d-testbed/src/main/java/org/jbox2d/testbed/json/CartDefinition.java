@@ -1,6 +1,7 @@
 package org.jbox2d.testbed.json;
 
 import org.jbox2d.common.Vec2;
+import org.jbox2d.dynamics.Body;
 import org.jbox2d.dynamics.World;
 import org.jbox2d.testbed.tests.Cart;
 
@@ -14,7 +15,7 @@ public class CartDefinition {
     public String wheel2;
     public float radius;
 
-    public void Draw(World world, float scale)
+    public Body Draw(World world, float scale)
     {
         // TODO: another proportionate function with string as vector parameter
         Vec2 vert1 = jsonReader.toVec2(A).mul(scale);
@@ -39,7 +40,8 @@ public class CartDefinition {
         vertices[2] = vert3;
         vertices[3] = vert4;
 
-        new Cart(world, vertices, wheelCenters, radius);
+        Cart cart = new Cart(world, vertices, wheelCenters, radius);
+        return cart.body;
     }
 
 }

@@ -1,6 +1,7 @@
 package org.jbox2d.testbed.json;
 
 import org.jbox2d.common.Vec2;
+import org.jbox2d.dynamics.Body;
 import org.jbox2d.dynamics.World;
 import org.jbox2d.testbed.tests.Ball;
 
@@ -10,13 +11,14 @@ public class BallDefinition {
     public float Radius;
     public Boolean IsStatic;
 
-    public void Draw(World world, float scale)
+    public Body Draw(World world, float scale)
     {
         Vec2 center = jsonReader.toVec2(Center).mul(scale);
 
         Radius = Radius * scale;
 
-        new Ball(world, center, Radius, !IsStatic);
+        Ball ball = new Ball(world, center, Radius, !IsStatic);
+        return ball.body;
     }
 
 }

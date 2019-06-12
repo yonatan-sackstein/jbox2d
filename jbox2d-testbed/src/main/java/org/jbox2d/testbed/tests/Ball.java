@@ -12,7 +12,7 @@ import org.jbox2d.dynamics.*;
  */
 public class Ball {
 
-    Body body;
+    public Body body;
 
     /**
      * Creates a circle body in the given world. The ball can be STATIC or DYNAMIC

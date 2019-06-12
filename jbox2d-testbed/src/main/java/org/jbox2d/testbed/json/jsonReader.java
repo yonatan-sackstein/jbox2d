@@ -3,12 +3,12 @@ package org.jbox2d.testbed.json;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import org.jbox2d.common.Vec2;
+import org.jbox2d.dynamics.Body;
 import org.jbox2d.dynamics.World;
 import org.jbox2d.testbed.tests.cartTest;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,32 +33,39 @@ public class jsonReader {
 
     public static void CompositionDecoder(Composition comp, World world, float scale)
     {
-        for (CartDefinition def : comp.Carts){
-            def.Draw(world, scale);
+        Body[] CartsBodyArray = new Body[comp.Carts.size()];
+        for (int ii=0; ii<comp.Carts.size(); ii++) {
+            CartsBodyArray[ii] = comp.Carts.get(ii).Draw(world, scale);
         }
 
-        for (BallDefinition def : comp.Balls){
-            def.Draw(world, scale);
+        Body[] BallsBodyArray = new Body[comp.Balls.size()];
+        for (int ii=0; ii<comp.Balls.size(); ii++) {
+            BallsBodyArray[ii] = comp.Balls.get(ii).Draw(world, scale);
         }
 
-        for (WallDefinition def : comp.Walls){
-            def.Draw(world, scale);
+        Body[] WallsBodyArray = new Body[comp.Walls.size()];
+        for (int ii=0; ii<comp.Walls.size(); ii++) {
+            WallsBodyArray[ii] = comp.Walls.get(ii).Draw(world, scale);
         }
 
-        for (BlockDefinition def : comp.Blocks){
-            def.Draw(world, scale);
+        Body[] BlocksBodyArray = new Body[comp.Blocks.size()];
+        for (int ii=0; ii<comp.Blocks.size(); ii++) {
+            BlocksBodyArray[ii] = comp.Blocks.get(ii).Draw(world, scale);
         }
 
-        for (LineDefinition def : comp.Lines){
-            def.Draw(world, scale);
+        Body[] TrianglesBodyArray = new Body[comp.Triangles.size()];
+        for (int ii=0; ii<comp.Triangles.size(); ii++) {
+            TrianglesBodyArray[ii] = comp.Triangles.get(ii).Draw(world, scale);
         }
 
-        for (SpringDefinition def : comp.Springs){
-            def.Draw(world, scale);
+        for (LineSpringDefinition def : comp.Lines){
+            def.Draw(world, scale, 0, 0, CartsBodyArray, BallsBodyArray,
+                    WallsBodyArray, BlocksBodyArray, TrianglesBodyArray);
         }
 
-        for (TriangleDefinition def : comp.Triangles){
-            def.Draw(world, scale);
+        for (LineSpringDefinition def : comp.Springs){
+            def.Draw(world, scale, 0.5f, 0, CartsBodyArray, BallsBodyArray,
+                    WallsBodyArray, BlocksBodyArray, TrianglesBodyArray);
         }
     }
 

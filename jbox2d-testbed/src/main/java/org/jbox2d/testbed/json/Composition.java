@@ -9,8 +9,8 @@ public class Composition {
     public List<BallDefinition> Balls;
     public List<WallDefinition> Walls;
     public List<BlockDefinition> Blocks;
-    public List<LineDefinition> Lines;
-    public List<SpringDefinition> Springs;
+    public List<LineSpringDefinition> Lines;
+    public List<LineSpringDefinition> Springs;
     public List<TriangleDefinition> Triangles;
 
 //    public Composition CompositionDefinition()
@@ -20,7 +20,7 @@ public class Composition {
 //            Balls = new List<BallDefinition>();
 //            Walls = new List<WallDefinition>();
 //            Blocks = new List<BlockDefinition>();
-//            Lines = new List<LineDefinition>();
+//            Lines = new List<LineSpringDefinition>();
 //            Springs = new List<SpringDefinition>();
 //            Triangles = new List<TriangleDefinition>();
 //

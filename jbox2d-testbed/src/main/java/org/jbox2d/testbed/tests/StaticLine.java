@@ -14,7 +14,7 @@ import org.jbox2d.dynamics.World;
  * The resulting body is only STATIC
  */
 public class StaticLine {
-    Body body;
+    public Body body;
 
     /**
      * Creates a body and a chain shape (and fixture for them).

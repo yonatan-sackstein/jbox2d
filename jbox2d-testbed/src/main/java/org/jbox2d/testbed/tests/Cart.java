@@ -16,7 +16,7 @@ public class Cart {
 
     private static int cartGroupIndex = -1; // bodies in the same group never collide
 
-    Body body;
+    public Body body;
 
     /**
      * Creates a cart body (main rectangle and two circles for wheels)
