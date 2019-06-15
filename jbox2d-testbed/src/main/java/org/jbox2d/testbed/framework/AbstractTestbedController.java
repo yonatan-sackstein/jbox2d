@@ -29,6 +29,7 @@ import org.jbox2d.common.IViewportTransform;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.World;
 
+import org.jbox2d.testbed.framework.j2d.TestbedSidePanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +39,7 @@ import javax.swing.*;
 
 import static org.jbox2d.testbed.framework.j2d.TestbedMain.getChooser;
 import static org.jbox2d.testbed.framework.j2d.TestbedMain.setNewJsonPath;
+import static org.jbox2d.testbed.framework.j2d.TestbedSidePanel.setNewImageLabel;
 
 /**
  * This class contains most control logic for the testbed and the update loop. It also watches the
@@ -429,6 +431,8 @@ public abstract class AbstractTestbedController {
     int threshold = settings.getSetting("Detection Precision [%] ").value;
 
     setNewJsonPath(showDetection, showMapping, threshold);
+    setNewImageLabel();
+
     reset();
   }
 }

@@ -20,3 +20,28 @@
   "Walls": [
     {
       "A": "15, 243",
+      "B": "248, 233"
+    }
+,    {
+      "A": "17, 241",
+      "B": "146, 236"
+    }
+,    {
+      "A": "23, 67",
+      "B": "224, 63"
+    }
+  ],
+  "Blocks": [],
+  "Lines": [
+    {
+      "A": "116, 59",
+      "B": "76, 133",
+      "connectionA": Walls,
+      "connectionB": Balls,
+      "indexA": 2,
+      "indexB": 0
+    }
+  ],
+  "Springs": [],
+  "Triangles": []
+}

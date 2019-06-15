@@ -53,6 +53,9 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
   final AbstractTestbedController controller;
 
   public JComboBox tests;
+  public static JPanel top;
+
+  private static JLabel text = new JLabel();
 
   private JButton pauseButton = new JButton("Resume");
   private JButton stepButton = new JButton("Step");
@@ -71,7 +74,7 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
     model.addTestChangeListener(new TestbedModel.TestChangedListener() {
       @Override
       public void testChanged(TestbedTest argTest, int argIndex) {
-        tests.setSelectedIndex(argIndex);
+//        tests.setSelectedIndex(argIndex);
 //        saveButton.setEnabled(argTest.isSaveLoadEnabled());
         loadButton.setEnabled(argTest.isSaveLoadEnabled());
       }
@@ -84,59 +87,61 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
 
     TestbedSettings settings = model.getSettings();
 
-    JPanel top = new JPanel();
+    top = new JPanel();
     top.setLayout(new GridLayout(0, 1));
     top.setBorder(BorderFactory.createCompoundBorder(new EtchedBorder(EtchedBorder.LOWERED),
         BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-    tests = new JComboBox(model.getComboModel());
-    tests.setMaximumRowCount(30);
-    tests.setMaximumSize(new Dimension(250, 20));
-    tests.addActionListener(this);
-    tests.setRenderer(new ListCellRenderer() {
-      JLabel categoryLabel = null;
-      JLabel testLabel = null;
 
+    setNewImageLabel();
 
+    //    tests = new JComboBox(model.getComboModel());
+//    tests.setMaximumRowCount(30);
+//    tests.setMaximumSize(new Dimension(250, 20));
+//    tests.addActionListener(this);
+//    tests.setRenderer(new ListCellRenderer() {
+//      JLabel categoryLabel = null;
+//      JLabel testLabel = null;
+//
+//
+//
+//      @Override
+//      public Component getListCellRendererComponent(JList list, Object ovalue, int index,
+//          boolean isSelected, boolean cellHasFocus) {
+//        ListItem value = (ListItem) ovalue;
+//        if (value.isCategory()) {
+//          if (categoryLabel == null) {
+//            categoryLabel = new JLabel();
+//            categoryLabel.setOpaque(true);
+//            categoryLabel.setBackground(new Color(.5f, .5f, .6f));
+//            categoryLabel.setForeground(Color.white);
+//            categoryLabel.setHorizontalAlignment(SwingConstants.CENTER);
+//            categoryLabel.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+//          }
+//          categoryLabel.setText(value.category);
+//          return categoryLabel;
+//        } else {
+//          if (testLabel == null) {
+//            testLabel = new JLabel();
+//            testLabel.setBorder(BorderFactory.createEmptyBorder(0, 5, 1, 0));
+//          }
+//
+//          testLabel.setText(value.test.getTestName());
+//
+//          if (isSelected) {
+//            testLabel.setBackground(list.getSelectionBackground());
+//            testLabel.setForeground(list.getSelectionForeground());
+//          } else {
+//            testLabel.setBackground(list.getBackground());
+//            testLabel.setForeground(list.getForeground());
+//          }
+//          return testLabel;
+//        }
+//      }
+//    });
 
-      @Override
-      public Component getListCellRendererComponent(JList list, Object ovalue, int index,
-          boolean isSelected, boolean cellHasFocus) {
-        ListItem value = (ListItem) ovalue;
-        if (value.isCategory()) {
-          if (categoryLabel == null) {
-            categoryLabel = new JLabel();
-            categoryLabel.setOpaque(true);
-            categoryLabel.setBackground(new Color(.5f, .5f, .6f));
-            categoryLabel.setForeground(Color.white);
-            categoryLabel.setHorizontalAlignment(SwingConstants.CENTER);
-            categoryLabel.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
-          }
-          categoryLabel.setText(value.category);
-          return categoryLabel;
-        } else {
-          if (testLabel == null) {
-            testLabel = new JLabel();
-            testLabel.setBorder(BorderFactory.createEmptyBorder(0, 5, 1, 0));
-          }
+//    top.add(new JLabel("Choose a test:"));
 
-          testLabel.setText(value.test.getTestName());
-
-          if (isSelected) {
-            testLabel.setBackground(list.getSelectionBackground());
-            testLabel.setForeground(list.getSelectionForeground());
-          } else {
-            testLabel.setBackground(list.getBackground());
-            testLabel.setForeground(list.getForeground());
-          }
-          return testLabel;
-        }
-      }
-    });
-
-    top.add(new JLabel("Choose a test:"));
-    top.setFont(new Font("David", Font.PLAIN, 20));
-
-    top.add(tests);
+//    top.add(tests);
 
     addSettings(top, settings, SettingType.DRAWING);
 
@@ -187,6 +192,16 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
     buttonGroups.add(buttons3);
 
     add(buttonGroups, "Center");
+  }
+
+  public static void setNewImageLabel() {
+    // Show name of selected image
+    File imageFile = TestbedMain.getChooser().getSelectedFile();
+    if(imageFile != null) {
+      text.setText("Image Name: " + imageFile.getName());
+      text.setFont(new Font("David", Font.BOLD, 20));
+      top.add(text, 0); // at the top of the panel
+    }
   }
 
   public void addListeners() {
@@ -301,7 +316,8 @@ public class TestbedSidePanel extends JPanel implements ChangeListener, ActionLi
   }
 
   public void actionPerformed(ActionEvent e) {
-    controller.playTest(tests.getSelectedIndex());
-  }
+    //controller.playTest(tests.getSelectedIndex());
+      controller.playTest(0);
+    }
 
 }

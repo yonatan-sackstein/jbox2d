@@ -391,11 +391,11 @@ public abstract class TestbedTest
       ++stepCount;
     }
 
-    debugDraw.drawString(5, m_textLine, "Engine Info", color4);
-    m_textLine += TEXT_LINE_SPACE;
-    debugDraw.drawString(5, m_textLine, "Framerate: " + (int) model.getCalculatedFps(),
-        Color3f.WHITE);
-    m_textLine += TEXT_LINE_SPACE;
+//    debugDraw.drawString(5, m_textLine, "Engine Info", color4);
+//    m_textLine += TEXT_LINE_SPACE;
+//    debugDraw.drawString(5, m_textLine, "Framerate: " + (int) model.getCalculatedFps(),
+//        Color3f.WHITE);
+//    m_textLine += TEXT_LINE_SPACE;
 
     if (settings.getSetting(TestbedSettings.DrawStats).enabled) {
       int particleCount = m_world.getParticleCount();

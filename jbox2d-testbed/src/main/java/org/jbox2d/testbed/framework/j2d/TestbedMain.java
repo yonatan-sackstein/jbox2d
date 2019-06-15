@@ -29,6 +29,8 @@ import org.jbox2d.testbed.framework.*;
 import org.jbox2d.testbed.framework.AbstractTestbedController.MouseBehavior;
 import org.jbox2d.testbed.framework.AbstractTestbedController.UpdateBehavior;
 
+import static org.jbox2d.testbed.framework.j2d.TestbedSidePanel.setNewImageLabel;
+
 /**
  * The entry point for the testbed application
  * 
@@ -99,8 +101,8 @@ public class TestbedMain {
     // + "Hopefully you're on a mac so the window isn't ugly as crap.");
     // }
 
-    InitializeEngine();
-    InitializeDetector();
+//    InitializeEngine();
+//    InitializeDetector();
 
     TestbedModel model = new TestbedModel();
     final AbstractTestbedController controller = new TestbedController(model,
@@ -124,6 +126,7 @@ public class TestbedMain {
     chooser.showOpenDialog(null);
 
     setNewJsonPath(false, false, 98);
+    setNewImageLabel();
     jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
 
     testbed.add(new JScrollPane(side), "East");
@@ -142,13 +145,13 @@ public class TestbedMain {
   }
 
     public static void setNewJsonPath(boolean showDetection, boolean showMapping, int threshold){
-        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100);
-//        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
+//        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100);
+        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
   }
 
     public static String getImagePath(){
-        return chooser.getSelectedFile().getPath();
-//        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
+//        return chooser.getSelectedFile().getPath();
+        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
     }
 
     public static JFileChooser getChooser(){
