@@ -101,8 +101,8 @@ public class TestbedMain {
     // + "Hopefully you're on a mac so the window isn't ugly as crap.");
     // }
 
-//    InitializeEngine();
-//    InitializeDetector();
+    InitializeEngine();
+    InitializeDetector();
 
     TestbedModel model = new TestbedModel();
     final AbstractTestbedController controller = new TestbedController(model,
@@ -145,13 +145,13 @@ public class TestbedMain {
   }
 
     public static void setNewJsonPath(boolean showDetection, boolean showMapping, int threshold){
-//        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100);
-        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
+        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100);
+//        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
   }
 
     public static String getImagePath(){
-//        return chooser.getSelectedFile().getPath();
-        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
+        return chooser.getSelectedFile().getPath();
+//        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
     }
 
     public static JFileChooser getChooser(){
